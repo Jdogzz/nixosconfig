@@ -10,7 +10,11 @@
     # Include the results of the hardware scan.
     ../hardware-configuration/hardware-configuration-msilaptop.nix
   ];
+  
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-9a7b6837-3bdc-4bb0-a19f-8002c602190a".device = "/dev/disk/by-uuid/9a7b6837-3bdc-4bb0-a19f-8002c602190a";
+  boot.initrd.luks.devices."luks-719c339a-6a5e-479d-a9d5-cfebe3e29854".device = "/dev/disk/by-uuid/719c339a-6a5e-479d-a9d5-cfebe3e29854";
   networking.hostName = "msilaptop"; # Define your hostname.
 }

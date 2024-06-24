@@ -8,25 +8,35 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "sd_mod" "rtsx_usb_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/50fdc6c4-b989-464e-9bab-ab16d4e2d46f";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/85a597d2-10b8-4d32-8d30-c7803b19b6b6";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
     };
 
-  boot.initrd.luks.devices."luks-46007eb6-a2c1-4cba-8749-73fcb2629034".device = "/dev/disk/by-uuid/46007eb6-a2c1-4cba-8749-73fcb2629034";
+  fileSystems."/mnt/seconddrive" =
+    { device = "/dev/disk/by-uuid/bcb7b75e-9f59-4009-b393-549e4391e208";
+      fsType = "btrfs";
+    };
+
+
+  boot.initrd.luks.devices."luks-d078eee5-3f30-4231-bbbe-384025b58df0".device = "/dev/disk/by-uuid/d078eee5-3f30-4231-bbbe-384025b58df0";
+ 
+  boot.initrd.luks.devices."luks-204afca2-166d-45a0-8033-e5ea922b8ab0".device = "/dev/disk/by-uuid/204afca2-166d-45a0-8033-e5ea922b8ab0";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/5B57-4FAD";
+    { device = "/dev/disk/by-uuid/1C1F-25C8";
       fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/5a4ebce3-8552-41c8-a722-c2ef4b4f31df"; }
+    [ { device = "/dev/disk/by-uuid/1eb85073-319b-4235-8619-b06f4bab8607"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -34,8 +44,8 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s20f0u2.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp3s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
