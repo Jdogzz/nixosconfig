@@ -60,7 +60,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home.nix;
+              home-manager.users.flakeuser = import ./home.nix { inherit pkgs; };
             }
           ];
         };
@@ -91,7 +91,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home.nix;
+              home-manager.users.flakeuser = import ./home.nix { inherit pkgs; };
             }
           ];
         };
@@ -120,7 +120,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home.nix;
+              home-manager.users.flakeuser = import ./home.nix { inherit pkgs; };
             }
           ];
         };
@@ -149,7 +149,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home.nix;
+              home-manager.users.flakeuser = import ./home.nix { inherit pkgs; };
             }
           ];
         };
