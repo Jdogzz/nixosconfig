@@ -142,7 +142,7 @@
     #System monitoring
     htop
     iotop-c
-    nvtop
+    nvtopPackages.nvidia
 
     #Terminal software
     dotacat
