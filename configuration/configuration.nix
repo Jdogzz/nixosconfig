@@ -253,4 +253,6 @@
   security.pam.services.swaylock = { };
   #security.pam.services.hyprlock = { };
   services.gvfs.enable = true;
+
+  service.btrfs.autoScrub.enable=true;
 }
