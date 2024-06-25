@@ -142,6 +142,7 @@
     #System monitoring
     htop
     iotop-c
+    nvtop
 
     #Terminal software
     dotacat

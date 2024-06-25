@@ -54,7 +54,8 @@
   services.avahi.openFirewall = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # Disabling sound.enable due to https://github.com/NixOS/nixpkgs/issues/319809
+  #sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
