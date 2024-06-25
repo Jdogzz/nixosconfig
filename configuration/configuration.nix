@@ -254,5 +254,5 @@
   #security.pam.services.hyprlock = { };
   services.gvfs.enable = true;
 
-  service.btrfs.autoScrub.enable=true;
+  services.btrfs.autoScrub.enable=true;
 }
