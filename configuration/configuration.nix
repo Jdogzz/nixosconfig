@@ -255,4 +255,6 @@
   services.gvfs.enable = true;
 
   services.btrfs.autoScrub.enable = true;
+
+  services.fwupd.enable = true;
 }
