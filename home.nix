@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -169,8 +169,7 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      figlet -f contessa Welcome, | dotacat
-      figlet -f cosmic ${config.home.username} | dotacat
+      figlet -f contessa GTD | dotacat
     '';
     plugins = [
       {
