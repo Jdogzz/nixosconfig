@@ -11,14 +11,6 @@
     ../hardware-configuration/hardware-configuration-mastercontrol.nix
   ];
 
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-3a0f50ad-04eb-4174-8c78-3fbf4e3a2bef".device = "/dev/disk/by-uuid/3a0f50ad-04eb-4174-8c78-3fbf4e3a2bef";
-  boot.initrd.luks.devices."luks-3a0f50ad-04eb-4174-8c78-3fbf4e3a2bef".keyFile = "/crypto_keyfile.bin";
-
+  boot.initrd.luks.devices."luks-14503795-627e-4b4e-b2a9-d6f427ccdb72".device = "/dev/disk/by-uuid/14503795-627e-4b4e-b2a9-d6f427ccdb72";
   networking.hostName = "mastercontrol"; # Define your hostname.
 }
