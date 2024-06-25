@@ -170,7 +170,7 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      figlet -f contessa GTD | dotacat
+      figlet -f cosmic GTD | dotacat
     '';
     plugins = [
       {
