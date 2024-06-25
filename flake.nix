@@ -67,7 +67,6 @@
             ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
             ./configuration/configuration-nvidia.nix
-            { inherit pkgs; }
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];
