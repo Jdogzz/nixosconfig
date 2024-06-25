@@ -68,6 +68,23 @@
             ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
             ./configuration/configuration-nvidia.nix
+            agenix.nixosModules.default
+            {
+              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
+              age.secrets.secret1 = {
+                file = ./secrets/secret1.age;
+                owner = "flakeuser";
+              };
+              age.secrets.secret2 = {
+                file = ./secrets/secret2.age;
+                owner = "flakeuser";
+              };
+              age.secrets.secret3 = {
+                file = ./secrets/secret3.age;
+                owner = "flakeuser";
+              };
+            }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -81,6 +98,23 @@
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-gadgetmobile.nix
+            agenix.nixosModules.default
+            {
+              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
+              age.secrets.secret1 = {
+                file = ./secrets/secret1.age;
+                owner = "flakeuser";
+              };
+              age.secrets.secret2 = {
+                file = ./secrets/secret2.age;
+                owner = "flakeuser";
+              };
+              age.secrets.secret3 = {
+                file = ./secrets/secret3.age;
+                owner = "flakeuser";
+              };
+            }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -94,6 +128,23 @@
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-lenovolaptop.nix
+            agenix.nixosModules.default
+            {
+              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
+              age.secrets.secret1 = {
+                file = ./secrets/secret1.age;
+                owner = "flakeuser";
+              };
+              age.secrets.secret2 = {
+                file = ./secrets/secret2.age;
+                owner = "flakeuser";
+              };
+              age.secrets.secret3 = {
+                file = ./secrets/secret3.age;
+                owner = "flakeuser";
+              };
+            }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
