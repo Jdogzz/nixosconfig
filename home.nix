@@ -449,14 +449,7 @@
   #On my list to get firefox profiles declaratively set
   programs.firefox = {
     enable = true;
-    profiles.gabriel = {
-      bookmarks = { };
-      extensions = with pkgs.inputs.firefox-addons; [
-        ublock-origin
-        darkreader
-        tridactyl
-        sidebery
-      ];
+    profiles.flakeuser = {
       bookmarks = { };
       settings = {
         "browser.disableResetPrompt" = true;

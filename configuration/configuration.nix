@@ -85,8 +85,6 @@
     packages = with pkgs; [ ];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
   programs.java = {
     enable = true;
     package = pkgs.jdk17;
@@ -254,5 +252,5 @@
   #security.pam.services.hyprlock = { };
   services.gvfs.enable = true;
 
-  services.btrfs.autoScrub.enable=true;
+  services.btrfs.autoScrub.enable = true;
 }

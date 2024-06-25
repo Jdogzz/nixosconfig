@@ -16,10 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix.url = "github:ryantm/agenix";
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -27,20 +23,25 @@
       nixpkgs,
       home-manager,
       agenix,
-      firefox-addons,
       ...
     }:
+    let
+      system = "x86_64-linux";
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
     {
       nixosConfigurations = {
         mastercontrol = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-mastercontrol.nix
             ./configuration/configuration-nvidia.nix
             agenix.nixosModules.default
             {
-              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              environment.systemPackages = [ agenix.packages.${system}.default ];
               age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
               age.secrets.secret1 = {
                 file = ./secrets/secret1.age;
@@ -63,19 +64,15 @@
             }
           ];
         };
-        jellyfin = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [ ./configuration/configuration.nix ];
-        };
+        jellyfin = nixpkgs.lib.nixosSystem { modules = [ ./configuration/configuration.nix ]; };
         msilaptop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
             ./configuration/configuration-nvidia.nix
             agenix.nixosModules.default
             {
-              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              environment.systemPackages = [ agenix.packages.${system}.default ];
               age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
               age.secrets.secret1 = {
                 file = ./secrets/secret1.age;
@@ -99,13 +96,12 @@
           ];
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-gadgetmobile.nix
             agenix.nixosModules.default
             {
-              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              environment.systemPackages = [ agenix.packages.${system}.default ];
               age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
               age.secrets.secret1 = {
                 file = ./secrets/secret1.age;
@@ -129,13 +125,12 @@
           ];
         };
         lenovolaptop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-lenovolaptop.nix
             agenix.nixosModules.default
             {
-              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+              environment.systemPackages = [ agenix.packages.${system}.default ];
               age.identityPaths = [ "/home/flakeuser/.ssh/id_ed25519" ];
               age.secrets.secret1 = {
                 file = ./secrets/secret1.age;
