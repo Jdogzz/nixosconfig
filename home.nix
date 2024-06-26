@@ -113,7 +113,7 @@
 
     #Media
     jellyfin-media-player
-    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
+    (kodi.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
     mpv
 
     #Audio
