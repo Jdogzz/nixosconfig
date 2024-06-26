@@ -217,6 +217,9 @@
         '';
       };
     };
+    shellInit = ''
+      set fish_greeting
+    '';
   };
 
   programs.starship = {
