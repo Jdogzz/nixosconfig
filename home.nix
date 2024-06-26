@@ -46,7 +46,6 @@
 
     #Development
     devenv
-    direnv
 
     #Documents
     libreoffice
@@ -677,11 +676,25 @@
   #   postExec = "${pkgs.mu}/bin/mu index";
   # };
 
-  services.lorri.enable = true;
-
   programs.emacs = {
     enable = true;
     package = pkgs.emacs29-pgtk;
     extraPackages = epkgs: [ epkgs.vterm ];
   };
+
+  programs.dircolors = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enbleFishIntegration = true;
+    nix-direnv = {
+      enable = true;
+    };
+  };
+
+  #Added to speed up direnv usage with nix
+  services.lorri.enable = true;
 }
