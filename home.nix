@@ -108,7 +108,6 @@
     noto-fonts-extra
     powerline-fonts
     source-code-pro
-    ttf-font-awesome
     vistafonts
 
     #Hyprland add ons
