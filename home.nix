@@ -102,7 +102,14 @@
     libre-caslon
     lmodern
     nerdfonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+    powerline-fonts
     source-code-pro
+    ttf-fira-sans
+    ttf-font-awesome
     vistafonts
 
     #Hyprland add ons
@@ -704,7 +711,7 @@
 
   programs.direnv = {
     enable = true;
-    enbleFishIntegration = true;
+    enableFishIntegration = true;
     nix-direnv = {
       enable = true;
     };
