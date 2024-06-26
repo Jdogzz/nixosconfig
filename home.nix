@@ -174,7 +174,8 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      figlet -f cosmic GTD | dotacat
+      figlet Time to | dotacat
+      figlet GTD | dotacat
     '';
     plugins = [
       {
