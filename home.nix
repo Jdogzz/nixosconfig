@@ -358,11 +358,24 @@
           "DP-3"
           "eDP-1"
         ];
-        modules-center = [ "clock" ];
+        modules-left = [ "hyprland/workspaces" ];
+        modules-center = [ "hyprland/window" ];
         modules-right = [
           "tray"
           "battery"
+          "clock"
         ];
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          "on-scroll-up" = "hyprctl dispatch workspace e+1";
+          "on-scroll-down" = "hyprctl dispatch workspace e-1";
+          "on-click" = "activate";
+        };
+        "hyprland/window" = {
+          "max-length" = 200;
+          "separate-outputs" = true;
+
+        };
         clock = {
           format = " {:%H:%M:%S %Z 󰸘 %y/%m/%d}";
           interval = 20;
@@ -406,14 +419,24 @@
       };
     };
     style = ''
-      * {
-        border: none;
-        border-radius: 0;
-        font-family: Source Code Pro;
+            * {
+              border: none;
+              border-radius: 0;
+              font-family: JetBrainsMono Nerd Font, sans-serif;
+            }
+            window#waybar {
+              background: #16191C;
+              color: #AAB2BF;
+            }
+      #workspaces button {
+          padding: 0 5px;
+          background: transparent;
+          color: white;
+          border-bottom: 3px solid transparent;
       }
-      window#waybar {
-        background: #16191C;
-        color: #AAB2BF;
+      #workspaces button.active {
+          background: #64727D;
+          border-bottom: 3px solid white;
       }
     '';
     systemd = {
