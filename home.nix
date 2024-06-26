@@ -13,7 +13,7 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -59,7 +59,7 @@
     xournalpp
 
     #Emacs
-    (emacs.override { withPgtk = true; })
+    #(emacs.override { withPgtk = true; })
     fd # Required for doom emacs
     fzf # Required for doom emacs
     ripgrep
@@ -97,6 +97,7 @@
     #Fonts
     corefonts # Cautiously reenabling, the download for this is brittle
     eb-garamond
+    font-awesome
     garamond-libre
     liberation_ttf
     libre-caslon
@@ -154,8 +155,9 @@
     zoom-us
 
     #Virtual machines
-    guestfs-tools
-    libguestfs-with-appliance
+    #These two packages were used to convert an img to a qcow2 file with sparsification. They are currently not needed.
+    #guestfs-tools
+    #libguestfs-with-appliance
     qemu_full
     (quickemu.override { qemu = qemu_full; })
 
@@ -252,7 +254,9 @@
       bind =
         [
           "$mod, F, exec, firefox"
-          "$mod, J, exec, jellyfinmediaplayer --platform xcb"
+          #Replacing the hotkey with Kodi for now while experiencing Nvidia driver crashes.
+          #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
+          "$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
           "$mod, R, exec, rofi -show drun -show-icons"
           "$mod, Q, exec, foot fish"
@@ -674,4 +678,10 @@
   # };
 
   services.lorri.enable = true;
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs29-pgtk;
+    extraPackages = epkgs: [ epkgs.vterm ];
+  };
 }
