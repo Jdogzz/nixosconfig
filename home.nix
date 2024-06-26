@@ -108,7 +108,6 @@
     noto-fonts-extra
     powerline-fonts
     source-code-pro
-    ttf-fira-sans
     ttf-font-awesome
     vistafonts
 
