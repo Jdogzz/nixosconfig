@@ -49,11 +49,9 @@
 
     #Documents
     libreoffice
-    mupdf
     okular
     pandoc
     pdfarranger
-    poppler_utils
     texlive.combined.scheme-full
     xournalpp
 
@@ -85,9 +83,6 @@
       ]
     ))
 
-    #Email
-    emacs.pkgs.mu4e
-
     #File management
     kdePackages.dolphin
     kdePackages.dolphin-plugins
@@ -98,9 +93,11 @@
     eb-garamond
     font-awesome
     garamond-libre
+    iosevka
     liberation_ttf
     libre-caslon
     lmodern
+    material-design-icons
     nerdfonts
     noto-fonts
     noto-fonts-cjk
@@ -404,6 +401,17 @@
         };
       };
     };
+    style = ''
+      * {
+        border: none;
+        border-radius: 0;
+        font-family: Source Code Pro;
+      }
+      window#waybar {
+        background: #16191C;
+        color: #AAB2BF;
+      }
+    '';
     systemd = {
       enable = true;
     };
@@ -689,6 +697,7 @@
   programs.msmtp.enable = true;
   programs.mu.enable = true;
 
+  #Automatically synchronize with all mail servers and index it
   #Disabling this since I may have more than one computer active
   #I'll manually pull down mail when I need it
   # services.mbsync = {
@@ -699,7 +708,10 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs29-pgtk;
-    extraPackages = epkgs: [ epkgs.vterm ];
+    extraPackages = epkgs: [
+      epkgs.vterm
+      epkgs.mu4e
+    ];
   };
 
   programs.dircolors = {
