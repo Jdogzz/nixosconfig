@@ -362,6 +362,7 @@
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "tray"
+          "wireplumber"
           "battery"
           "clock"
         ];
