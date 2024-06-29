@@ -56,7 +56,6 @@
     xournalpp
 
     #Emacs
-    #(emacs.override { withPgtk = true; })
     fd # Required for doom emacs
     fzf # Required for doom emacs
     ripgrep
@@ -115,7 +114,7 @@
 
     #Media
     jellyfin-media-player
-    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
+    (kodi.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ])) # 2024-06-29 kodi-wayland corrupts the border of the display, switching back to kodi for now.
     mpv
 
     #Audio
@@ -275,6 +274,7 @@
         [
           "$mod, F, exec, firefox"
           #Replacing the hotkey with Kodi for now while experiencing Nvidia driver crashes.
+          #2024-06-29 Crashes still occurring.
           #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
           "$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
@@ -414,6 +414,16 @@
             ""
             ""
             ""
+          ];
+        };
+        wireplumber = {
+          format = "{volume}% {icon}";
+          "format-muted" = "";
+          "on-click" = "helvum";
+          "format-icons" = [
+            ""
+            ""
+            ""
           ];
         };
       };
@@ -604,6 +614,7 @@
     };
   };
 
+  #Support for notifications.
   services.dunst.enable = true;
 
   services.gnome-keyring = {

@@ -54,15 +54,13 @@
   services.avahi.openFirewall = true;
 
   # Enable sound with pipewire.
-  # Disabling sound.enable due to https://github.com/NixOS/nixpkgs/issues/319809
-  #sound.enable = true;
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
@@ -121,6 +119,9 @@
     unrar
     unzip
     zip
+
+    #Audio
+    helvum # 2024-06-29 I added this to use by waybar for volume control module.
 
     #Media
     vlc
