@@ -114,7 +114,7 @@
 
     #Media
     jellyfin-media-player
-    (kodi.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ])) # 2024-06-29 kodi-wayland corrupts the border of the display, switching back to kodi for now.
+    (kodi.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellycon ])) # 2024-06-29 kodi-wayland corrupts the border of the display, switching back to kodi for now.
     mpv
 
     #Audio
