@@ -44,6 +44,9 @@
     #Browsers
     ungoogled-chromium
 
+    #Calculation
+    units
+
     #Development
     devenv
 
@@ -114,7 +117,12 @@
 
     #Media
     jellyfin-media-player
-    (kodi.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellycon ])) # 2024-06-29 kodi-wayland corrupts the border of the display, switching back to kodi for now.
+    (kodi.passthru.withPackages (
+      kodiPkgs: with kodiPkgs; [
+        jellycon
+        upnext
+      ]
+    )) # 2024-06-29 kodi-wayland corrupts the border of the display, switching back to kodi for now.
     mpv
 
     #Audio
@@ -146,10 +154,12 @@
     iotop-c
     nvtopPackages.nvidia
 
-    #Terminal software
+    #Terminal colorization
     dotacat
-    figlet
     grc
+
+    #Terminal formatting
+    figlet
 
     #Video conference
     zoom-us
