@@ -22,6 +22,8 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
