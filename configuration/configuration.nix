@@ -100,6 +100,10 @@
     NIXOS_OZONE_WL = "1"; # hint electron apps to use wayland
     #WLR_NO_HARDWARE_CURSORS = "1"; # Fixes invisible cursor in hyprland
     WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    LIBVA_DRIVER_NAME = "nvidia";
+    XDG_SESSION_TYPE = "wayland";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
   #This overlay is needed because of the extra compile options for blurays. See https://github.com/NixOS/nixpkgs/issues/63641
