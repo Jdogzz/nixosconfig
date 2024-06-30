@@ -17,6 +17,7 @@
     ];
     enable = true;
     enable32Bit = true;
+    package = config.hardware.nvidia.package;
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -28,6 +29,7 @@
     powerManagement = {
       enable = true;
     };
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   boot.kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
