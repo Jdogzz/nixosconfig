@@ -105,7 +105,7 @@
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     WLR_DRM_DEVICES = "/dev/dri/card0";
-    WLR_RENDER_DRM_DEVICE = "/dev/dri/card0";
+    WLR_RENDER_DRM_DEVICE = "/dev/dri/card1";
   };
 
   #This overlay is needed because of the extra compile options for blurays. See https://github.com/NixOS/nixpkgs/issues/63641
