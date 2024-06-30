@@ -104,7 +104,7 @@
     XDG_SESSION_TYPE = "wayland";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    WLR_DRM_DEVICES = "/dev/dri/card0";
+    WLR_DRM_DEVICES = "/dev/dri/card1";
     WLR_RENDER_DRM_DEVICE = "/dev/dri/card1";
   };
 
