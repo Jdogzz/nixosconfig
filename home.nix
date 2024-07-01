@@ -155,6 +155,9 @@
     #Terminal formatting
     figlet
 
+    #Theming
+    papirus-icon-theme
+
     #Video conference
     zoom-us
 
@@ -788,7 +791,7 @@
         font = "Hack:weight=bold:size=36";
         line-height = 50;
         fields = "name,generic,comment,categories,filename,keywords";
-        terminal = "${pkgs.foot}/bin/foot";
+        terminal = "${pkgs.foot}/bin/foot fish";
         prompt = "❯   ";
         layer = "overlay";
       };
