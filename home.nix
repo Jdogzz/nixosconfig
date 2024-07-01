@@ -791,7 +791,7 @@
         font = "Hack:weight=bold:size=36";
         line-height = 50;
         fields = "name,generic,comment,categories,filename,keywords";
-        terminal = "${pkgs.foot}/bin/foot fish";
+        terminal = "${pkgs.foot}/bin/foot -e";
         prompt = "❯   ";
         layer = "overlay";
       };
