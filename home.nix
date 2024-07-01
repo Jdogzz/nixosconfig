@@ -287,7 +287,7 @@
           ", Print, exec, grimblast copy area"
           #Commenting out rofi to try out fuzzel. Hopefully will help start programs with a better environment.
           #"$mod, R, exec, rofi -show drun -show-icons"
-          "$mod, R, exec, fuzzel"
+          "$mod, R, exec, fish -c 'fuzzel'"
           "$mod, Q, exec, foot fish"
           "$mod, C, killactive"
           "$mod, E, exec, emacs"
@@ -791,7 +791,7 @@
         font = "Hack:weight=bold:size=36";
         line-height = 50;
         fields = "name,generic,comment,categories,filename,keywords";
-        terminal = "${pkgs.foot}/bin/foot -e";
+        terminal = "${pkgs.foot}/bin/foot";
         prompt = "❯   ";
         layer = "overlay";
       };
