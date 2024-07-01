@@ -283,11 +283,11 @@
           #Replacing the hotkey with Kodi for now while experiencing Nvidia driver crashes.
           #2024-06-29 Crashes still occurring.
           #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
-          "$mod, K, exec, fish -c 'kodi'"
+          "$mod, K, exec, sh -c 'kodi'"
           ", Print, exec, grimblast copy area"
           #Commenting out rofi to try out fuzzel. Hopefully will help start programs with a better environment.
           #"$mod, R, exec, rofi -show drun -show-icons"
-          "$mod, R, exec, fish -c 'fuzzel'"
+          "$mod, R, exec, sh -c 'fuzzel'"
           "$mod, Q, exec, foot fish"
           "$mod, C, killactive"
           "$mod, E, exec, emacs"
