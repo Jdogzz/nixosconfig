@@ -60,7 +60,6 @@
 
     #Emacs
     fd # Required for doom emacs
-    fzf # Required for doom emacs
     ripgrep
     ripgrep-all
 
@@ -283,7 +282,9 @@
           #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
           "$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
-          "$mod, R, exec, rofi -show drun -show-icons"
+          #Commenting out rofi to try out fuzzel. Hopefully will help start programs with a better environment.
+          #"$mod, R, exec, rofi -show drun -show-icons"
+          "$mod, R, exec, fuzzel"
           "$mod, Q, exec, foot fish"
           "$mod, C, killactive"
           "$mod, E, exec, emacs"
@@ -758,6 +759,11 @@
     ];
   };
 
+  #Required for doom emacs
+  programs.fzf = {
+    enable = true;
+  };
+
   programs.dircolors = {
     enable = true;
     enableFishIntegration = true;
@@ -772,4 +778,27 @@
 
   #Added to speed up direnv usage with nix
   services.lorri.enable = true;
+
+  programs.fuzzel = {
+    enable = true;
+    settings = {
+      main = {
+        icon-theme = "Papirus-Dark";
+        width = 25;
+        font = "Hack:weight=bold:size=36";
+        line-height = 50;
+        fields = "name,generic,comment,categories,filename,keywords";
+        terminal = "${pkgs.foot}/bin/foot";
+        prompt = "❯   ";
+        layer = "overlay";
+      };
+      colors = {
+        background = "282a36fa";
+        selection = "3d4474fa";
+        border = "fffffffa";
+      };
+      border.radius = 20;
+      dmenu.exit-immediately-if-empty = "yes";
+    };
+  };
 }
