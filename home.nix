@@ -229,6 +229,7 @@
     '';
   };
 
+  programs.zsh.enable = true;
   programs.starship = {
     enable = true;
   };
@@ -283,7 +284,7 @@
           #Replacing the hotkey with Kodi for now while experiencing Nvidia driver crashes.
           #2024-06-29 Crashes still occurring.
           #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
-          "$mod, K, exec, fish -c 'kodi -fs'"
+          "$mod, K, exec, zsh -c 'kodi'"
           ", Print, exec, grimblast copy area"
           #Commenting out rofi to try out fuzzel. Hopefully will help start programs with a better environment.
           #"$mod, R, exec, rofi -show drun -show-icons"
