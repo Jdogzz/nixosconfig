@@ -116,7 +116,7 @@
 
     #Media
     jellyfin-media-player
-    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ])) # 2024-06-29 kodi-wayland corrupts the border of the display, switching back to kodi for now.
+    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
     mpv
 
     #Audio
@@ -229,7 +229,6 @@
     '';
   };
 
-  programs.zsh.enable = true;
   programs.starship = {
     enable = true;
   };
@@ -284,10 +283,8 @@
           #Replacing the hotkey with Kodi for now while experiencing Nvidia driver crashes.
           #2024-06-29 Crashes still occurring.
           #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
-          "$mod, K, exec, zsh -c 'kodi'"
+          "$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
-          #Commenting out rofi to try out fuzzel. Hopefully will help start programs with a better environment.
-          #"$mod, R, exec, rofi -show drun -show-icons"
           "$mod, R, exec, fish -c 'fuzzel'"
           "$mod, Q, exec, foot fish"
           "$mod, C, killactive"
@@ -472,12 +469,6 @@
       wallpaper = [ ",~/gitrepos/nixosconfig/wallpaper.jpg" ];
     };
   };
-
-  # programs.rofi = {
-  #   enable = true;
-  #   package = pkgs.rofi-wayland;
-  #   theme = "dmenu";
-  # };
 
   xdg.portal = {
     enable = true;
