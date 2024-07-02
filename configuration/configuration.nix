@@ -132,6 +132,9 @@
     #Audio
     helvum # 2024-06-29 I added this to use by waybar for volume control module.
 
+    #Gaming
+    lutris
+
     #Media
     vlc
 
