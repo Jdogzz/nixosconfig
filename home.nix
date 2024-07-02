@@ -780,8 +780,8 @@
       main = {
         icon-theme = "Papirus-Dark";
         width = 25;
-        font = "Hack:weight=bold:size=36";
-        line-height = 50;
+        font = "Hack:weight=bold:size=20";
+        line-height = 20;
         fields = "name,generic,comment,categories,filename,keywords";
         terminal = "${pkgs.foot}/bin/foot";
         prompt = "❯   ";
