@@ -134,6 +134,7 @@
 
     #Gaming
     lutris
+    protonup-qt
 
     #Media
     vlc
