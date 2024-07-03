@@ -133,7 +133,10 @@
     helvum # 2024-06-29 I added this to use by waybar for volume control module.
 
     #Gaming
+    gamemode
+    gamescope
     lutris
+    mangohud
     protonup-qt
 
     #Media
