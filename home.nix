@@ -137,8 +137,8 @@
 
     #Password/secret management
     gcr # Apparently needed for gnome keyring to work.
-    gnome.seahorse
     keepassxc
+    seahorse
 
     #Reference management
     zotero
@@ -165,8 +165,7 @@
     #These two packages were used to convert an img to a qcow2 file with sparsification. They are currently not needed.
     #guestfs-tools
     #libguestfs-with-appliance
-    qemu_full
-    (quickemu.override { qemu = qemu_full; })
+    quickemu
 
     #VNC
     tigervnc
