@@ -116,7 +116,7 @@
 
     #Media
     jellyfin-media-player
-    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
+    (kodi-gbm.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
     mpv
 
     #Audio
@@ -223,6 +223,13 @@
           end
         '';
       };
+    };
+    shellAbbrs = {
+      qrs = "rsync -achvP --mkpath ";
+    };
+    shellAliases = {
+      vmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/Public/";
+      zmzm = "QT_SCALE_FACTOR=0.5 zoom";
     };
     shellInit = ''
       set fish_greeting
