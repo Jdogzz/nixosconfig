@@ -36,4 +36,8 @@
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
     "nvidia_drm.fbdev=1"
   ];
+
+  config = {
+    environment.systemPackages = [ pkgs.cudatoolkit ];
+  };
 }
