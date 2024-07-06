@@ -117,7 +117,6 @@
     #Media
     jellyfin-media-player
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
-    mpv
 
     #Audio
     k3b
@@ -146,7 +145,6 @@
     #System monitoring
     htop
     iotop-c
-    nvtopPackages.nvidia
 
     #Terminal colorization
     dotacat
@@ -286,10 +284,9 @@
       bind =
         [
           "$mod, F, exec, firefox"
-          #Replacing the hotkey with Kodi for now while experiencing Nvidia driver crashes.
-          #2024-06-29 Crashes still occurring.
-          #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
-          "$mod, K, exec, kodi"
+          #2024-07-06 Cautiously switching back to jellyfin media player now that crashes seem to have stopped.
+          "$mod, J, exec, jellyfinmediaplayer --platform xcb"
+          #"$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
           "$mod, R, exec, fish -c 'fuzzel'"
           "$mod, Q, exec, foot fish"
@@ -802,4 +799,6 @@
       dmenu.exit-immediately-if-empty = "yes";
     };
   };
+
+  programs.mpv.enable = true;
 }

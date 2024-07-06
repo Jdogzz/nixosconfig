@@ -37,7 +37,8 @@
     "nvidia_drm.fbdev=1"
   ];
 
-  #config = {
-  environment.systemPackages = [ pkgs.cudatoolkit ];
-  #};
+  environment.systemPackages = with pkgs; [
+    cudatoolkit
+    nvtopPackages.nvidia
+  ];
 }
