@@ -71,14 +71,6 @@
     #media-session.enable = true;
   };
 
-  hardware.pulseaudio = {
-    enable = true;
-    package = pkgs.pulseaudioFull;
-    extraConfig = "
-  load-module module-switch-on-connect
-";
-  };
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
