@@ -7,12 +7,24 @@
 
 {
   home.packages = with pkgs; [
+    #Clipboard
+    wl-clipboard # xclip Alternative
+
     #File management
     kdePackages.dolphin
+
+    #Notifications
+    libnotify # Depedency of dunst
 
     #Password/secret management
     gcr # Apparently needed for gnome keyring to work.
     seahorse
+
+    #Screenshots
+    grimblast # Screenshot utility
+
+    #Wayland
+    slurp # Select utility
 
   ];
 

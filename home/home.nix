@@ -107,12 +107,6 @@
     source-code-pro
     vistafonts
 
-    #Hyprland add ons
-    grimblast # Screenshot utility
-    libnotify # Depedency of dunst
-    slurp # Select utility
-    wl-clipboard # xclip Alternative
-
     #Media
     jellyfin-media-player
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
@@ -152,6 +146,7 @@
     figlet
 
     #Theming
+    adwaita-icon-theme
     papirus-icon-theme
 
     #Video conference
