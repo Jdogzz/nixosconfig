@@ -113,8 +113,7 @@
 
     #Audio
     k3b
-    #Build for picard failing: https://github.com/NixOS/nixpkgs/issues/325946
-    #picard
+    picard
 
     #Books
     calibre
