@@ -42,6 +42,7 @@
   home.packages = with pkgs; [
 
     #Browsers
+    librewolf
     ungoogled-chromium
 
     #Calculation
