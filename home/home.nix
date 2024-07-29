@@ -87,6 +87,7 @@
 
     #File management
     kdePackages.dolphin-plugins
+    kdePackages.kdegraphics-thumbnailers
     rclone
 
     #Fonts
