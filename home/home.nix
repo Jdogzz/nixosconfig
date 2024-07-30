@@ -129,6 +129,9 @@
     mkvtoolnix
     yt-dlp
 
+    #Network monitoring
+    traceroute
+
     #Password/secret management
     keepassxc
 
