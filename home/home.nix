@@ -48,6 +48,10 @@
     #Calculation
     units
 
+    #Communication
+    jami
+    zoom-us
+
     #Development
     devenv
 
@@ -152,9 +156,6 @@
     #Theming
     adwaita-icon-theme
     papirus-icon-theme
-
-    #Video conference
-    zoom-us
 
     #Virtual machines
     #These two packages were used to convert an img to a qcow2 file with sparsification. They are currently not needed.
