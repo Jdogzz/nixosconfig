@@ -89,6 +89,9 @@
       ]
     ))
 
+    #Email
+    maildrop
+
     #File management
     kdePackages.dolphin-plugins
     kdePackages.kdegraphics-thumbnailers
