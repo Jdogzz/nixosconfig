@@ -142,6 +142,9 @@
     #Reference management
     zotero
 
+    #RSS downloader
+    ua
+
     #System monitoring
     htop
     iotop-c
