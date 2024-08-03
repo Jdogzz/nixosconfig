@@ -147,6 +147,7 @@
 
     #RSS downloader
     ua
+    jq # Requirement for ua
 
     #System monitoring
     htop
