@@ -24,7 +24,7 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    open = false;
+    #open = false; #This should be unnecessary starting with https://github.com/NixOS/nixpkgs/pull/329450
     nvidiaSettings = true;
     powerManagement = {
       enable = true;
