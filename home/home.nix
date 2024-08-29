@@ -398,33 +398,33 @@
         passwordCommand = "cat /run/agenix/secret3";
         maildir.path = "pacbell";
       };
-      outlook = {
-        address = "virtualprocessor@outlook.com";
-        userName = "virtualprocessor@outlook.com";
-        realName = "virtualprocessor@outlook.com";
-        imap = {
-          host = "outlook.office365.com";
-          port = 993;
-          tls.enable = true;
-        };
-        mbsync = {
-          enable = true;
-          create = "maildir";
-          expunge = "both";
-        };
-        msmtp.enable = true;
-        mu.enable = true;
-        smtp = {
-          host = "smtp-mail.outlook.com";
-          port = 587;
-          tls = {
-            enable = true;
-            useStartTls = true;
-          };
-        };
-        passwordCommand = "cat /run/agenix/secret1";
-        maildir.path = "outlook";
-      };
+      # outlook = {
+      #   address = "virtualprocessor@outlook.com";
+      #   userName = "virtualprocessor@outlook.com";
+      #   realName = "virtualprocessor@outlook.com";
+      #   imap = {
+      #     host = "outlook.office365.com";
+      #     port = 993;
+      #     tls.enable = true;
+      #   };
+      #   mbsync = {
+      #     enable = true;
+      #     create = "maildir";
+      #     expunge = "both";
+      #   };
+      #   msmtp.enable = true;
+      #   mu.enable = true;
+      #   smtp = {
+      #     host = "smtp-mail.outlook.com";
+      #     port = 587;
+      #     tls = {
+      #       enable = true;
+      #       useStartTls = true;
+      #     };
+      #   };
+      #   passwordCommand = "cat /run/agenix/secret1";
+      #   maildir.path = "outlook";
+      # };
       comcast = {
         address = "jerzor@comcast.net";
         userName = "jerzor@comcast.net";
