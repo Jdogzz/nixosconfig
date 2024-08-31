@@ -92,16 +92,12 @@
                 owner = "flakeuser";
               };
             }
-            # hyprland.homeManagerModules.default
-            # {
-            #   wayland.windowManager.hyprland.enable = true;
-            # }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
-            }
+              home-manager.extraSpecialArgs=commonArgs;
           ];
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
@@ -130,10 +126,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
-              home-manager.extraSpecialArgs = {
-                inherit hyprland;
-              };
-            }
+              home-manager.extraSpecialArgs=commonArgs;
           ];
         };
         lenovolaptop = nixpkgs.lib.nixosSystem {

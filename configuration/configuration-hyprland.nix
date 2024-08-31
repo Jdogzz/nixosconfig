@@ -23,7 +23,7 @@
 
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.default;
+    package = inputs.hyprland.packages.x86_64-linux.hyprland;
   };
 
   services.greetd = {

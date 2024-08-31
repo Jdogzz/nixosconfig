@@ -2,7 +2,7 @@
   config,
   lib,
   pkgs,
-  hyprland,
+  inputs
   ...
 }:
 
@@ -32,7 +32,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    package = hyprland.packages.x86_64-linux.default;
     settings = {
       general = {
         gaps_in = 5;
