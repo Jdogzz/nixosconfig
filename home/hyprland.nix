@@ -260,7 +260,7 @@
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
-    configPackages = [ pkgs.hyprland ];
+    configPackages = [ inputs.hyprland.packages.x86_64-linux.hyprland ];
   };
 
   #There are some serious issues using hyprlock with Nvidia, disabling this and using swaylock until things are fixed
