@@ -22,7 +22,7 @@
 
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    package = hyprland.packages."${pkgs.system}".hyprland;
   };
 
   services.greetd = {
