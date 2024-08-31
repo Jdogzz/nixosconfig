@@ -262,5 +262,5 @@
   services.blueman.enable = true;
 
   #imports = [ ./configuration-hyprland.nix ];
-  imports = [./configuration-kde.nix]
+  imports = [ ./configuration-kde.nix ];
 }
