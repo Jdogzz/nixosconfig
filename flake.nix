@@ -8,7 +8,9 @@
     # NixOS official package source, using the nixos-unstable branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
