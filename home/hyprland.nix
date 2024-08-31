@@ -29,7 +29,7 @@
   ];
 
   wayland.windowManager.hyprland = {
-    #    enable = true;
+    enable = true;
     xwayland.enable = true;
     settings = {
       general = {
