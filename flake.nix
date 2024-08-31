@@ -99,7 +99,9 @@
               home-manager.users.flakeuser = import ./home/home.nix;
             }
           ];
-          extraSpecialArgs={inherit inputs;}
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
           modules = [
