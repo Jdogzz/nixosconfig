@@ -32,6 +32,9 @@
     }:
     let
       system = "x86_64-linux";
+      commonArgs = {
+        inherit inputs;
+      };
     in
     {
       nixosConfigurations = {
@@ -67,6 +70,7 @@
         };
         jellyfin = nixpkgs.lib.nixosSystem { modules = [ ./configuration/configuration.nix ]; };
         msilaptop = nixpkgs.lib.nixosSystem {
+          specialsArgs = commonArgs;
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
@@ -99,9 +103,6 @@
               home-manager.users.flakeuser = import ./home/home.nix;
             }
           ];
-          specialArgs = {
-            inherit inputs;
-          };
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
           modules = [
