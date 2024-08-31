@@ -130,6 +130,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.extraSpecialArgs = commonArgs;
             }
           ];
         };

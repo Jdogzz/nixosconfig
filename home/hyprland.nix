@@ -15,7 +15,7 @@
     kdePackages.dolphin
 
     #Notifications
-    libnotify # Depedency of dunst
+    libnotify # Dependency of dunst
 
     #Password/secret management
     gcr # Apparently needed for gnome keyring to work.
