@@ -525,6 +525,5 @@
   #   inputs.hyprland.homeManagerModules.default
   #   ./hyprland.nix
   # ]
-  # #
-  ;
+  # ;
 }
