@@ -261,5 +261,6 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
-  imports = [ ./configuration-hyprland.nix ];
+  #imports = [ ./configuration-hyprland.nix ];
+  imports = [./configuration-kde.nix]
 }
