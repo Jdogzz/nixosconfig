@@ -7,6 +7,10 @@
   inputs = {
     # NixOS official package source, using the nixos-unstable branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       # The `follows` keyword in inputs is used for inheritance.
@@ -82,6 +86,10 @@
                 file = ./secrets/secret3.age;
                 owner = "flakeuser";
               };
+            }
+            hyprland.homeManagerModules.default
+            {
+              wayland.windowManager.hyprland.enable = true;
             }
             home-manager.nixosModules.home-manager
             {
