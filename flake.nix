@@ -99,7 +99,7 @@
               home-manager.users.flakeuser = import ./home/home.nix;
             }
           ];
-          extraSpecialArgs = {
+          specialArgs = {
             inherit inputs;
           };
         };
