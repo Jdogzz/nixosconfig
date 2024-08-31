@@ -70,7 +70,7 @@
         };
         jellyfin = nixpkgs.lib.nixosSystem { modules = [ ./configuration/configuration.nix ]; };
         msilaptop = nixpkgs.lib.nixosSystem {
-          specialsArgs = commonArgs;
+          specialArgs = commonArgs;
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
