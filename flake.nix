@@ -8,8 +8,7 @@
     # NixOS official package source, using the nixos-unstable branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
+      url = "github:hyprwm/Hyprland";
       submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -90,10 +89,10 @@
                 owner = "flakeuser";
               };
             }
-            # hyprland.homeManagerModules.default
-            # {
-            #   wayland.windowManager.hyprland.enable = true;
-            # }
+            hyprland.homeManagerModules.default
+            {
+              wayland.windowManager.hyprland.enable = true;
+            }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
