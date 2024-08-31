@@ -177,6 +177,27 @@
     bottles
     wine
     winetricks
+
+    #Hyprland necessities
+    #Clipboard
+    wl-clipboard # xclip Alternative
+
+    #File management
+    kdePackages.dolphin
+
+    #Notifications
+    libnotify # Dependency of dunst
+
+    #Password/secret management
+    gcr # Apparently needed for gnome keyring to work.
+    seahorse
+
+    #Screenshots
+    grimblast # Screenshot utility
+
+    #Wayland
+    slurp # Select utility
+
   ];
 
   programs.fish = {
@@ -525,27 +546,27 @@
   #   ./hyprland.nix
   # ];
 
-  home.packages = with pkgs; [
-    #Clipboard
-    wl-clipboard # xclip Alternative
+  # home.packages = with pkgs; [
+  #   #Clipboard
+  #   wl-clipboard # xclip Alternative
 
-    #File management
-    kdePackages.dolphin
+  #   #File management
+  #   kdePackages.dolphin
 
-    #Notifications
-    libnotify # Dependency of dunst
+  #   #Notifications
+  #   libnotify # Dependency of dunst
 
-    #Password/secret management
-    gcr # Apparently needed for gnome keyring to work.
-    seahorse
+  #   #Password/secret management
+  #   gcr # Apparently needed for gnome keyring to work.
+  #   seahorse
 
-    #Screenshots
-    grimblast # Screenshot utility
+  #   #Screenshots
+  #   grimblast # Screenshot utility
 
-    #Wayland
-    slurp # Select utility
+  #   #Wayland
+  #   slurp # Select utility
 
-  ];
+  # ];
 
   wayland.windowManager.hyprland = {
     enable = true;
