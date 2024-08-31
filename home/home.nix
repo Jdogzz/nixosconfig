@@ -521,5 +521,8 @@
 
   programs.mpv.enable = true;
 
-  imports = [ ./hyprland.nix ];
+  imports = [
+    ./hyprland.nix
+    { inherit hyprland; }
+  ];
 }
