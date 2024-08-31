@@ -42,7 +42,7 @@
   home.packages = with pkgs; [
 
     #Browsers
-    #librewolf #Removing while there's a build failure: https://github.com/NixOS/nixpkgs/issues/336490
+    librewolf # Removing while there's a build failure: https://github.com/NixOS/nixpkgs/issues/336490
     ungoogled-chromium
 
     #Calculation
