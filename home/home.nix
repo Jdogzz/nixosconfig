@@ -347,13 +347,13 @@
     userName = "flakeuser";
   };
 
-  #Tray disabled for now and I'll just use the browser interface
+  #Temporarily trying the tray under Gnome
   #See https://github.com/nix-community/home-manager/issues/3416
   services.syncthing = {
     enable = true;
-    # tray = {
-    #   enable = true;
-    # };
+    tray = {
+      enable = true;
+    };
   };
 
   accounts.email = {
