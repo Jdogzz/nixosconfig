@@ -93,8 +93,6 @@
     maildrop
 
     #File management
-    kdePackages.dolphin-plugins
-    kdePackages.kdegraphics-thumbnailers
     rclone
 
     #Fonts
@@ -241,17 +239,6 @@
   programs.starship = {
     enable = true;
   };
-
-  #Set all things to dark mode
-  dconf = {
-    enable = true;
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-  };
-
-  qt.enable = true;
-  qt.style.name = "adwaita-dark";
-  gtk.enable = true;
-  gtk.theme.name = "Adwaita-dark";
 
   #On my list to get firefox profiles declaratively set
   programs.firefox = {

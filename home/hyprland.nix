@@ -13,6 +13,8 @@
 
     #File management
     kdePackages.dolphin
+    kdePackages.dolphin-plugins
+    kdePackages.kdegrahics-thumbnailers
 
     #Notifications
     libnotify # Dependency of dunst
@@ -314,5 +316,16 @@
   };
 
   services.network-manager-applet.enable = true;
+
+  #Set all things to dark mode
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
+
+  qt.enable = true;
+  qt.style.name = "adwaita-dark";
+  gtk.enable = true;
+  gtk.theme.name = "Adwaita-dark";
 
 }
