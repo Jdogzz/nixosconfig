@@ -76,6 +76,7 @@
     html-tidy
     nil
     nixfmt-rfc-style
+    nodePackages.prettier
     shellcheck
     shfmt
 
