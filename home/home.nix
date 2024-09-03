@@ -114,6 +114,9 @@
     source-code-pro
     vistafonts
 
+    #Hardware information
+    pciutils
+
     #Media
     jellyfin-media-player
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
