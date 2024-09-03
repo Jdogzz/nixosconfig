@@ -20,6 +20,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix.url = "github:ryantm/agenix";
+    nixos-hardware.url = "github:Jdogzz/nixos-hardware";
   };
 
   outputs =
@@ -28,6 +29,7 @@
       #      hyprland,
       home-manager,
       agenix,
+      nixos-hardware,
       ...
     }:
     let
@@ -158,6 +160,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
             }
+            nixos-hardware.nixosModules.lenovo-yoga-6-13ALC6
           ];
         };
 
