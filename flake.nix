@@ -131,6 +131,7 @@
               home-manager.users.flakeuser = import ./home/home.nix;
               home-manager.extraSpecialArgs = commonArgs;
             }
+            nixos-hardware.nixosModules.gpd-win-mini-2024
           ];
         };
         lenovolaptop = nixpkgs.lib.nixosSystem {
