@@ -34,7 +34,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.hyprland;
+    #package = inputs.hyprland.packages.x86_64-linux.hyprland;
     settings = {
       general = {
         gaps_in = 5;
