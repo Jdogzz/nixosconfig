@@ -76,7 +76,7 @@
           modules = [
             ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
-            ./configuration/configuration-nvidia.nix
+            #./configuration/configuration-nvidia.nix
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];
