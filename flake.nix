@@ -26,7 +26,7 @@
   outputs =
     inputs@{
       nixpkgs,
-      #      hyprland,
+      hyprland,
       home-manager,
       agenix,
       nixos-hardware,
