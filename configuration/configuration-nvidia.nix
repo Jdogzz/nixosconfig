@@ -9,11 +9,11 @@
   hardware.graphics = {
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
-      intel-media-driver
+      #intel-media-driver
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [
       nvidia-vaapi-driver
-      intel-media-driver
+      #intel-media-driver
     ];
     enable32Bit = true;
     package = config.hardware.nvidia.package;
