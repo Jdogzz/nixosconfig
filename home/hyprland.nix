@@ -14,7 +14,7 @@
     #File management
     kdePackages.dolphin
     kdePackages.dolphin-plugins
-    kdePackages.kdegrahics-thumbnailers
+    kdePackages.kdegraphics-thumbnailers
 
     #Notifications
     libnotify # Dependency of dunst
