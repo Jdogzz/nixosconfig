@@ -13,4 +13,11 @@
 
   boot.initrd.luks.devices."luks-14503795-627e-4b4e-b2a9-d6f427ccdb72".device = "/dev/disk/by-uuid/14503795-627e-4b4e-b2a9-d6f427ccdb72";
   networking.hostName = "mastercontrol"; # Define your hostname.
+
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = true;
+  };
 }

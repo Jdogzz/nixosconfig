@@ -15,16 +15,11 @@
       nvidia-vaapi-driver
       intel-media-driver
     ];
-    enable = true;
     enable32Bit = true;
     package = config.hardware.nvidia.package;
   };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   hardware.nvidia = {
-    modesetting.enable = true;
-    open = true;
     nvidiaSettings = true;
     powerManagement = {
       enable = true;
