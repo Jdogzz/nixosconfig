@@ -258,10 +258,10 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  #hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
-  #imports = [ ./configuration-hyprland.nix ];
-  imports = [ ./configuration-kde.nix ];
+  imports = [ ./configuration-hyprland.nix ];
+  #imports = [ ./configuration-kde.nix ];
 }
