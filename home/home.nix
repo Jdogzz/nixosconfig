@@ -513,7 +513,7 @@
   programs.mpv.enable = true;
 
   imports = [
-    inputs.hyprland.homeManagerModules.default
+    #inputs.hyprland.homeManagerModules.default
     ./hyprland.nix
   ];
 }
