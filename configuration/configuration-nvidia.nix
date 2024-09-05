@@ -7,6 +7,7 @@
 
 {
   hardware.graphics = {
+    enable = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
       #intel-media-driver
@@ -19,7 +20,11 @@
     package = config.hardware.nvidia.package;
   };
 
+  services.xserver.videoDrivers = [ "nvidia" ];
+
   hardware.nvidia = {
+    open = true;
+    modesetting.enable = true;
     nvidiaSettings = true;
     powerManagement = {
       enable = true;
