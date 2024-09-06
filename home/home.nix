@@ -73,12 +73,15 @@
 
     #Emacs programming
     black
+    ghostscript # Adding for DocView previewing
     html-tidy
+    mupdf # Adding for DocView previewing
     nil
     nixfmt-rfc-style
     nodePackages.prettier
     shellcheck
     shfmt
+    unoconv # Adding for DocView Office document previewing
 
     #Emacs spelling check
     (aspellWithDicts (
