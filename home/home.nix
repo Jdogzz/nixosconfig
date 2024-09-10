@@ -42,7 +42,7 @@
   home.packages = with pkgs; [
 
     #Browsers
-    librewolf # Removing while there's a build failure: https://github.com/NixOS/nixpkgs/issues/336490
+    librewolf
     ungoogled-chromium
 
     #Calculation
@@ -73,6 +73,7 @@
 
     #Emacs programming
     black
+    cmake
     ghostscript # Adding for DocView previewing
     html-tidy
     mupdf # Adding for DocView previewing
