@@ -88,6 +88,7 @@
       "networkmanager"
       "wheel"
       "libvirtd"
+      "adbusers"
     ];
     packages = with pkgs; [ ];
   };
@@ -264,4 +265,6 @@
 
   imports = [ ./configuration-hyprland.nix ];
   #imports = [ ./configuration-kde.nix ];
+
+  programs.adb.enable = true;
 }
