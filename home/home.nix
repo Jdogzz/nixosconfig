@@ -50,7 +50,7 @@
 
     #Communication
     jami
-    #zoom-us
+    zoom-us
 
     #Development
     devenv
