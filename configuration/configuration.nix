@@ -232,7 +232,7 @@
   services.samba = {
     enable = true;
     openFirewall = true;
-    securityType = "user";
+    settings.global.security = "user";
     # extraConfig = ''
     #   workgroup = WORKGROUP
     #   server string = smbnix
