@@ -24,6 +24,7 @@
       "application/pdf" = [ "org.kde.okular.desktop" ];
       "image/vnd.djvu" = [ "org.kde.okular.desktop" ];
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "writer.desktop" ];
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.document" = [ "calc.desktop" ];
       "application/vnd.openxmlformats-officedocument.presentationml.presentation" = [ "impress.desktop" ];
       "x-scheme-handler/http" = [ "firefox.desktop" ];
       "x-scheme-handler/https" = [ "firefox.desktop" ];
