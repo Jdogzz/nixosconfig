@@ -20,7 +20,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix.url = "github:ryantm/agenix";
-    nixos-hardware.url = "github:Jdogzz/nixos-hardware";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
 
   outputs =
