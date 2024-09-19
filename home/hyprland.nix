@@ -9,6 +9,7 @@
 {
   home.packages = with pkgs; [
     #Clipboard
+    cliphist
     wl-clipboard # xclip Alternative
 
     #File management
@@ -36,6 +37,7 @@
     xwayland.enable = true;
     #package = inputs.hyprland.packages.x86_64-linux.hyprland;
     settings = {
+      "exec-once" = "wl-paste --watch cliphist store"; # Stores only text data
       general = {
         gaps_in = 5;
         gaps_out = 5;
@@ -75,10 +77,11 @@
           "$mod, Q, exec, foot fish"
           "$mod, C, killactive"
           "$mod, E, exec, emacs"
-          "$mod, V, togglefloating,"
+          "$mod, T, togglefloating,"
           "$mod, L, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg"
           "$mod, S, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg & sleep 0.5 && systemctl suspend" # The 5 second delay is to try and avoid conflict between swaylock and suspending.
           "$mod, P, pseudo"
+          "$mod, V, exec, cliphist list | fuzzel --dmenu --width=50 | cliphist decode | wl-copy"
           "$mod, left, movefocus, l"
           "$mod, right, movefocus, r"
           "$mod, up, movefocus, u"
