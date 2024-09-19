@@ -71,11 +71,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1726611255,
-        "narHash": "sha256-/bxaYvIK6/d3zqpW26QFS0rqfd0cO4qreSNWvYLTl/w=",
+        "lastModified": 1726745512,
+        "narHash": "sha256-9xY9UEKC7gsA4sj5cZvZXk5jT/p2wGtkpp8hqE9yIRA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d2493de5cd1da06b6a4c3e97f4e7d5dd791df457",
+        "rev": "7578176649a08abb73dfbd2755a5988766952b53",
         "type": "github"
       },
       "original": {
@@ -86,15 +86,15 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1725886192,
-        "narHash": "sha256-6pmocyV8vFoxtMutVJHhrPByWxffLs+mlEXlb7pgBvU=",
-        "owner": "Jdogzz",
+        "lastModified": 1726724509,
+        "narHash": "sha256-sVeAM1tgVi52S1e29fFBTPUAFSzgQwgLon3CrztXGm8=",
+        "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "23a4ea7a0d1c5cb52f6f3ace8ce5b85da9e3b9e6",
+        "rev": "10d5e0ecc32984c1bf1a9a46586be3451c42fd94",
         "type": "github"
       },
       "original": {
-        "owner": "Jdogzz",
+        "owner": "NixOS",
         "repo": "nixos-hardware",
         "type": "github"
       }
