@@ -57,6 +57,7 @@
     devenv
 
     #Documents
+    k2pdfopt
     libreoffice
     okular
     pandoc
