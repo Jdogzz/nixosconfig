@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     #Clipboard
     cliphist
+    python312Packages.pyclip
     python312Packages.pyperclip
     wl-clipboard # xclip Alternative
     wl-clip-persist
