@@ -54,6 +54,7 @@
     zoom-us
 
     #Development
+    android-studio
     devenv
 
     #Documents
