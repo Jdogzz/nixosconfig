@@ -279,4 +279,6 @@
   #imports = [ ./configuration-kde.nix ];
 
   programs.adb.enable = true;
+
+  virtualisation.waydroid.enable = true;
 }
