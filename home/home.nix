@@ -51,6 +51,7 @@
 
     #Communication
     jami
+    simplex-chat-desktop
     zoom-us
 
     #Development
