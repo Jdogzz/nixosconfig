@@ -133,7 +133,7 @@
     picard
 
     #Books
-    calibre
+    #calibre #Remove calibre while waiting for fix go go through https://nixpk.gs/pr-tracker.html?pr=349884
 
     #Images
     gimp
