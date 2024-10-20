@@ -50,7 +50,6 @@
     units
 
     #Communication
-    jami
     simplex-chat-desktop
     zoom-us
 
@@ -137,6 +136,7 @@
     calibre
 
     #Images
+    gimp
     (imagemagick.override { libwebpSupport = true; })
 
     #Video
