@@ -129,7 +129,7 @@
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
 
     #Audio
-    k3b
+    #k3b #Removed while build failure going: https://github.com/NixOS/nixpkgs/issues/348919
     picard
 
     #Books
