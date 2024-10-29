@@ -150,7 +150,7 @@
     traceroute
 
     #Notes
-    (logseq.override { electron = pkgs.electron_27; })
+    logseq
 
     #Password/secret management
     keepassxc
