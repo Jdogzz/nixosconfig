@@ -133,10 +133,11 @@
     picard
 
     #Books
-    #calibre #Remove calibre while waiting for fix go go through https://nixpk.gs/pr-tracker.html?pr=349884
+    calibre
 
     #Images
-    gimp
+    darktable
+    gimp-with-plugins
     (imagemagick.override { libwebpSupport = true; })
 
     #Video
@@ -147,6 +148,9 @@
 
     #Network monitoring
     traceroute
+
+    #Notes
+    (logseq.override { electron = pkgs.electron_27; })
 
     #Password/secret management
     keepassxc
