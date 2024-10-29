@@ -137,6 +137,10 @@
     })
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
+  ];
+
   environment.systemPackages = with pkgs; [
     #Archive management
     atool
