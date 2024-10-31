@@ -24,7 +24,8 @@
       "application/pdf" = [ "org.kde.okular.desktop" ];
       "image/vnd.djvu" = [ "org.kde.okular.desktop" ];
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "writer.desktop" ];
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.document" = [ "calc.desktop" ];
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = [ "calc.desktop" ];
+      "application/vnd.oasis.opendocument.spreadsheet" = [ "calc.desktop" ];
       "application/vnd.openxmlformats-officedocument.presentationml.presentation" = [ "impress.desktop" ];
       "x-scheme-handler/http" = [ "firefox.desktop" ];
       "x-scheme-handler/https" = [ "firefox.desktop" ];
@@ -37,6 +38,7 @@
       "application/x-extension-xhtml" = [ "firefox.desktop" ];
       "application/x-extension-xht" = [ "firefox.desktop" ];
       "text/html" = [ "firefox.desktop" ];
+      "application/epub+zip" = [ "calibre-ebook-viewer.desktop" ];
     };
   };
 
