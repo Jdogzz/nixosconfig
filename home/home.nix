@@ -45,7 +45,6 @@
   home.packages = with pkgs; [
 
     #Browsers
-    librewolf
     ungoogled-chromium
 
     #Calculation
@@ -78,14 +77,17 @@
     #Emacs programming
     black
     cmake
-    ghostscript # Adding for DocView previewing
     html-tidy
-    mupdf # Adding for DocView previewing
     nil
     nixfmt-rfc-style
     nodePackages.prettier
     shellcheck
     shfmt
+
+    #Emacs tools
+    ghostscript # Adding for DocView previewing
+    libtool # Adding for vterm compilation
+    mupdf # Adding for DocView previewing
     unoconv # Adding for DocView Office document previewing
 
     #Emacs spelling check
