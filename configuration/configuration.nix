@@ -285,4 +285,6 @@
   programs.adb.enable = true;
 
   virtualisation.waydroid.enable = true;
+
+  programs.k3b.enable = true;
 }

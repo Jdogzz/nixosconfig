@@ -58,6 +58,7 @@
     devenv
 
     #Documents
+    cups-pdf-to-pdf
     k2pdfopt
     libreoffice
     okular
@@ -133,7 +134,6 @@
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
 
     #Audio
-    #k3b #Removed while build failure going: https://github.com/NixOS/nixpkgs/issues/348919
     picard
 
     #Books
@@ -247,7 +247,8 @@
       qrs = "rsync -achvP --mkpath ";
     };
     shellAliases = {
-      vmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/Public/";
+      winvmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/Public/";
+      browservmlaunch = "quickemu --vm ubuntu-24.10.conf --display spice --public-dir ~/Public/";
       zmzm = "QT_SCALE_FACTOR=0.5 zoom";
     };
     shellInit = ''
@@ -458,7 +459,7 @@
         maildir.path = "comcast";
       };
     };
-    maildirBasePath = "generalsync/general-reference/emails";
+    maildirBasePath = "generalsync/reference/emails";
   };
 
   programs.mbsync.enable = true;
