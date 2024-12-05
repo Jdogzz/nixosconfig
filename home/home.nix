@@ -117,7 +117,6 @@
     libre-caslon
     lmodern
     material-design-icons
-    nerd-fonts
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
