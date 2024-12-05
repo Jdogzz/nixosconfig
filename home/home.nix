@@ -130,6 +130,7 @@
 
     #Media
     jellyfin-media-player
+    kdePackages.k3b
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
 
     #Audio
