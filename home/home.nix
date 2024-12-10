@@ -65,7 +65,6 @@
     pandoc
     paps
     pdfarranger
-    ps2pdf
     texlive.combined.scheme-full
     xournalpp
 
