@@ -53,7 +53,10 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    cups-pdf.enable=true;
+  };
 
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
