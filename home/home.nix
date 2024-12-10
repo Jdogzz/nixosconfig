@@ -63,6 +63,7 @@
     libreoffice
     okular
     pandoc
+    paps
     pdfarranger
     texlive.combined.scheme-full
     xournalpp
