@@ -68,6 +68,10 @@
     texlive.combined.scheme-full
     xournalpp
 
+    #Document languages
+    hunspellDicts.en_US
+    hunspellDicts.es_MX
+
     #Emacs
     fd # Required for doom emacs
     ripgrep
