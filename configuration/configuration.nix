@@ -55,7 +55,7 @@
   # Enable CUPS to print documents.
   services.printing = {
     enable = true;
-    cups-pdf.enable=true;
+    cups-pdf.enable = true;
   };
 
   services.avahi.enable = true;
@@ -163,7 +163,7 @@
     vlc
 
     #Nix package management
-    nix-tree # Can be used to resolve unusual package problems
+    #nix-tree # Can be used to resolve unusual package problems # 2024-12-27 Removing as not used in some time.
 
     #Programming
     gcc
@@ -285,7 +285,7 @@
   imports = [ ./configuration-hyprland.nix ];
   #imports = [ ./configuration-kde.nix ];
 
-  programs.adb.enable = true;
+  #programs.adb.enable = true; #2024-12-27 Not used in some time, disabling
 
-  virtualisation.waydroid.enable = true;
+  #virtualisation.waydroid.enable = true; #2024-12-27 Not used in some time, disabling
 }
