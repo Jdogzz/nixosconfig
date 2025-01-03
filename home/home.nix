@@ -137,8 +137,9 @@
 
     #Media
     jellyfin-media-player
-    kdePackages.k3b.override # Removing transcode dependency while waiting for PR: https://github.com/NixOS/nixpkgs/pull/358364
-    { transcode = null; }
+    (kdePackages.k3b.override # Removing transcode dependency while waiting for PR: https://github.com/NixOS/nixpkgs/pull/358364
+      { transcode = null; }
+    )
     (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
 
     #Audio
