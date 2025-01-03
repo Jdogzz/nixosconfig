@@ -63,7 +63,7 @@
     libreoffice
     okular
     pandoc
-    paps
+    #paps #2025-01-03 Disabling due to build failure, not used often so may be okay to remove.
     pdfarranger
     texlive.combined.scheme-full
     xournalpp
