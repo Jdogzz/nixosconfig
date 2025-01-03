@@ -68,7 +68,7 @@
     texlive.combined.scheme-full
     xournalpp
 
-    #Document languages
+    #Document languages: Needed to enable libreoffice spell check
     hunspellDicts.en_US
     hunspellDicts.es_MX
 
