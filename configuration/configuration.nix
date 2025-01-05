@@ -233,24 +233,25 @@
     spiceUSBRedirection.enable = true;
   };
 
-  services.samba = {
-    enable = true;
-    openFirewall = true;
-    settings.global.security = "user";
-    # extraConfig = ''
-    #   workgroup = WORKGROUP
-    #   server string = smbnix
-    #   netbios name = smbnix
-    #   security = user
-    #   #use sendfile = yes
-    #   #max protocol = smb2
-    #   # note: localhost is the ipv6 localhost ::1
-    #   hosts allow = 192.168.0. 127.0.0.1 localhost
-    #   hosts deny = 0.0.0.0/0
-    #   guest account = nobody
-    #   map to guest = bad user
-    # '';
-  };
+  # Testing removal of samba service with ongoing build failures: https://github.com/NixOS/nixpkgs/pull/370304
+  # services.samba = {
+  #   enable = true;
+  #   openFirewall = true;
+  #   settings.global.security = "user";
+  #   # extraConfig = ''
+  #   #   workgroup = WORKGROUP
+  #   #   server string = smbnix
+  #   #   netbios name = smbnix
+  #   #   security = user
+  #   #   #use sendfile = yes
+  #   #   #max protocol = smb2
+  #   #   # note: localhost is the ipv6 localhost ::1
+  #   #   hosts allow = 192.168.0. 127.0.0.1 localhost
+  #   #   hosts deny = 0.0.0.0/0
+  #   #   guest account = nobody
+  #   #   map to guest = bad user
+  #   # '';
+  # };
 
   nix.gc = {
     automatic = true;
