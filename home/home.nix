@@ -441,32 +441,32 @@
       #   passwordCommand = "cat /run/agenix/secret1";
       #   maildir.path = "outlook";
       # };
-      comcast = {
-        address = "jerzor@comcast.net";
-        userName = "jerzor@comcast.net";
-        realName = "jerzor@comcast.net";
-        imap = {
-          host = "imap.comcast.net";
-          port = 993;
-          tls = {
-            enable = true;
-          };
-        };
-        mbsync = {
-          enable = true;
-          create = "maildir";
-          expunge = "both";
-        };
-        msmtp.enable = true;
-        mu.enable = true;
-        smtp = {
-          host = "smtp.comcast.net";
-          port = 587;
-          tls.enable = true;
-        };
-        passwordCommand = "cat /run/agenix/secret2";
-        maildir.path = "comcast";
-      };
+      # comcast = {
+      #   address = "jerzor@comcast.net";
+      #   userName = "jerzor@comcast.net";
+      #   realName = "jerzor@comcast.net";
+      #   imap = {
+      #     host = "imap.comcast.net";
+      #     port = 993;
+      #     tls = {
+      #       enable = true;
+      #     };
+      #   };
+      #   mbsync = {
+      #     enable = true;
+      #     create = "maildir";
+      #     expunge = "both";
+      #   };
+      #   msmtp.enable = true;
+      #   mu.enable = true;
+      #   smtp = {
+      #     host = "smtp.comcast.net";
+      #     port = 587;
+      #     tls.enable = true;
+      #   };
+      #   passwordCommand = "cat /run/agenix/secret2";
+      #   maildir.path = "comcast";
+      # };
     };
     maildirBasePath = "generalsync/reference/emails";
   };
