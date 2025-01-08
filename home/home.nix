@@ -150,7 +150,7 @@
 
     #Images
     darktable
-    gimp-with-plugins
+    #gimp-with-plugins #Removing while waiting for https://github.com/NixOS/nixpkgs/pull/369822
     (imagemagick.override { libwebpSupport = true; })
 
     #Video
