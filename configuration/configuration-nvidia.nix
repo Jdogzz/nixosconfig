@@ -41,4 +41,7 @@
     cudatoolkit
     nvtopPackages.nvidia
   ];
+
+  #Temporary workaround for https://github.com/NixOS/nixpkgs/issues/371058
+  systemd.services.systemd-suspend.environment.SYSTEMD_SLEEP_FREEZE_USER_SESSIONS = "false";
 }
