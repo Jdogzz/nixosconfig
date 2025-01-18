@@ -74,8 +74,8 @@
       bind =
         [
           "$mod, F, exec, firefox"
-          "$mod, J, exec, jellyfinmediaplayer --platform xcb"
-          #"$mod, K, exec, kodi"
+          #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
+          "$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
           "$mod, R, exec, fish -c 'fuzzel'"
           "$mod, Q, exec, foot fish"
