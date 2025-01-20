@@ -377,13 +377,11 @@
     userName = "flakeuser";
   };
 
-  #Disabling tray under hyprland with waybar
-  #See https://github.com/nix-community/home-manager/issues/3416
   services.syncthing = {
     enable = true;
-    # tray = {
-    #   enable = true;
-    # };
+    tray = {
+      enable = true;
+    };
   };
 
   accounts.email = {
