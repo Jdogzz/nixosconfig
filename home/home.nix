@@ -60,7 +60,7 @@
 
     #Documents
     cups-pdf-to-pdf
-    k2pdfopt
+    #k2pdfopt #2025-01-31 Removing while build failure https://github.com/NixOS/nixpkgs/issues/376898
     libreoffice
     okular
     pandoc
