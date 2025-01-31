@@ -52,6 +52,7 @@
 
     #Communication
     simplex-chat-desktop
+    thunderbird
     zoom-us
 
     #Development
