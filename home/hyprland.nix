@@ -293,14 +293,14 @@
     settings = {
       general = {
         disable_loading_bar = true;
-        grace = 300;
+        grace = 2;
         hide_cursor = true;
         no_fade_in = false;
       };
 
       background = [
         {
-          path = "~/gitrepos/nixosconfig/wallpaper.jpg"; # "screenshot";
+          path = "screenshot"; # ~/gitrepos/nixosconfig/wallpaper.jpg";
           blur_passes = 3;
           blur_size = 8;
         }
