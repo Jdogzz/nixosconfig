@@ -50,7 +50,7 @@
   #locking the computer
   #programs.sway.enable = true;
   # security.pam.services.swaylock = { };
-  #security.pam.services.hyprlock = { };
+  security.pam.services.hyprlock = { };
 
   #2025-02-03 May have been added to allow mounting in Dolphin
   services.gvfs.enable = true;
