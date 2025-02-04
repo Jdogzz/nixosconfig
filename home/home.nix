@@ -152,7 +152,7 @@
 
     #Images
     darktable
-    #gimp-with-plugins #Removing while waiting for https://github.com/NixOS/nixpkgs/pull/369822
+    gimp-with-plugins
     (imagemagick.override { libwebpSupport = true; })
 
     #Video
@@ -511,29 +511,6 @@
 
   #Added to speed up direnv usage with nix
   services.lorri.enable = true;
-
-  programs.fuzzel = {
-    enable = true;
-    settings = {
-      main = {
-        icon-theme = "Papirus-Dark";
-        width = 25;
-        font = "Hack:weight=bold:size=20";
-        line-height = 20;
-        fields = "name,generic,comment,categories,filename,keywords";
-        terminal = "${pkgs.foot}/bin/foot";
-        prompt = "❯   ";
-        layer = "overlay";
-      };
-      colors = {
-        background = "282a36fa";
-        selection = "3d4474fa";
-        border = "fffffffa";
-      };
-      border.radius = 20;
-      dmenu.exit-immediately-if-empty = "yes";
-    };
-  };
 
   programs.mpv.enable = true;
 

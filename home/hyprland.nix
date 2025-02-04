@@ -82,8 +82,10 @@
           "$mod, C, killactive"
           "$mod, E, exec, emacs"
           "$mod, T, togglefloating,"
-          "$mod, L, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg"
-          "$mod, S, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg & sleep 0.5 && systemctl suspend" # The 5 second delay is to try and avoid conflict between swaylock and suspending.
+          # "$mod, L, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg"
+          # "$mod, S, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg & sleep 0.5 && systemctl suspend" # The 5 second delay is to try and avoid conflict between swaylock and suspending.
+          "$mod, L, exec, hyprlock"
+          "$mod, L, exec, hyprlock & sleep 0.2 && systemctl suspend"
           "$mod, P, pseudo"
           "$mod, V, exec, cliphist list | fuzzel --dmenu --width=50 | cliphist decode | wl-copy"
           "$mod, left, movefocus, l"
@@ -286,43 +288,41 @@
     configPackages = [ pkgs.hyprland ];
   };
 
-  #There are some serious issues using hyprlock with Nvidia, disabling this and using swaylock until things are fixed
-  #See e.g. https://github.com/hyprwm/hyprlock/issues/128
-  # programs.hyprlock = {
-  #   enable = true;
-  #   settings = {
-  #     general = {
-  #       disable_loading_bar = true;
-  #       grace = 300;
-  #       hide_cursor = true;
-  #       no_fade_in = false;
-  #     };
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      general = {
+        disable_loading_bar = true;
+        grace = 300;
+        hide_cursor = true;
+        no_fade_in = false;
+      };
 
-  #     background = [
-  #       {
-  #         path = "~/gitrepos/nixosconfig/wallpaper.jpg"; # "screenshot";
-  #         # blur_passes = 3;
-  #         # blur_size = 8;
-  #       }
-  #     ];
+      background = [
+        {
+          path = "~/gitrepos/nixosconfig/wallpaper.jpg"; # "screenshot";
+          blur_passes = 3;
+          blur_size = 8;
+        }
+      ];
 
-  #     input-field = [
-  #       {
-  #         size = "200, 50";
-  #         position = "0, -80";
-  #         monitor = "";
-  #         dots_center = true;
-  #         fade_on_empty = false;
-  #         font_color = "rgb(202, 211, 245)";
-  #         inner_color = "rgb(91, 96, 120)";
-  #         outer_color = "rgb(24, 25, 38)";
-  #         outline_thickness = 5;
-  #         placeholder_text = ''<span foreground="##cad3f5">Password...</span>'';
-  #         shadow_passes = 2;
-  #       }
-  #     ];
-  #   };
-  # };
+      input-field = [
+        {
+          size = "200, 50";
+          position = "0, -80";
+          monitor = "";
+          dots_center = true;
+          fade_on_empty = false;
+          font_color = "rgb(202, 211, 245)";
+          inner_color = "rgb(91, 96, 120)";
+          outer_color = "rgb(24, 25, 38)";
+          outline_thickness = 5;
+          placeholder_text = ''<span foreground="##cad3f5">Password...</span>'';
+          shadow_passes = 2;
+        }
+      ];
+    };
+  };
 
   #Support for notifications.
   services.dunst.enable = true;
@@ -348,5 +348,28 @@
   qt.style.name = "adwaita-dark";
   gtk.enable = true;
   gtk.theme.name = "Adwaita-dark";
+
+  programs.fuzzel = {
+    enable = true;
+    settings = {
+      main = {
+        icon-theme = "Papirus-Dark";
+        width = 25;
+        font = "Hack:weight=bold:size=20";
+        line-height = 20;
+        fields = "name,generic,comment,categories,filename,keywords";
+        terminal = "${pkgs.foot}/bin/foot";
+        prompt = "❯   ";
+        layer = "overlay";
+      };
+      colors = {
+        background = "282a36fa";
+        selection = "3d4474fa";
+        border = "fffffffa";
+      };
+      border.radius = 20;
+      dmenu.exit-immediately-if-empty = "yes";
+    };
+  };
 
 }

@@ -11,9 +11,10 @@
     #Audio
     helvum # 2024-06-29 I added this to use by waybar for volume control module.
     pavucontrol
+    qpwgraph # 2025-02-03 I added this to reroute audio from Firefox when using hyprland.
 
     #Lock
-    swaylock
+    # swaylock
   ];
 
   programs.gnome-disks.enable = true;
@@ -48,7 +49,9 @@
 
   #locking the computer
   #programs.sway.enable = true;
-  security.pam.services.swaylock = { };
+  # security.pam.services.swaylock = { };
   #security.pam.services.hyprlock = { };
+
+  #2025-02-03 May have been added to allow mounting in Dolphin
   services.gvfs.enable = true;
 }
