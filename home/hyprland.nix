@@ -85,7 +85,7 @@
           # "$mod, L, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg"
           # "$mod, S, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg & sleep 0.5 && systemctl suspend" # The 5 second delay is to try and avoid conflict between swaylock and suspending.
           "$mod, L, exec, hyprlock"
-          "$mod, L, exec, hyprlock & sleep 0.2 && systemctl suspend"
+          "$mod, S, exec, hyprlock & sleep 0.2 && systemctl suspend"
           "$mod, P, pseudo"
           "$mod, V, exec, cliphist list | fuzzel --dmenu --width=50 | cliphist decode | wl-copy"
           "$mod, left, movefocus, l"
