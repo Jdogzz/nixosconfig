@@ -38,7 +38,7 @@
       #     --cmd Hyprland''; # This may be necessary to get the xdg mimeapps to be set properly.
       # };
       initial_session = {
-        command = "${pkgs.hyprland}/bin/Hyprland";
+        command = "Hyprland";
         user = "flakeuser";
       };
       default_session = initial_session;
