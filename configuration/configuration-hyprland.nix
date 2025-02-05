@@ -29,7 +29,6 @@
 
   services.greetd = {
     enable = true;
-    vt = 3;
     settings = {
       # default_session = {
       #   command = ''
@@ -39,8 +38,8 @@
       #     --cmd Hyprland''; # This may be necessary to get the xdg mimeapps to be set properly.
       # };
       initial_session = {
-        user = "flakeuser";
         command = "Hyprland";
+        user = "flakeuser";
       };
     };
   };
