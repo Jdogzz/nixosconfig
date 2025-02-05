@@ -40,8 +40,10 @@
     xwayland.enable = true;
     #package = inputs.hyprland.packages.x86_64-linux.hyprland;
     settings = {
-      "exec-once" = "hyprlock"; # Sets up initial log in screen after boot
-      "exec-once" = "wl-paste --watch cliphist store"; # Stores only text data
+      exec-once = [
+        "hyprlock" # Sets up initial log in screen after boot
+        "wl-paste --watch cliphist store" # Stores only text data
+      ];
       general = {
         gaps_in = 5;
         gaps_out = 5;
