@@ -29,7 +29,7 @@
 
   services.greetd = {
     enable = true;
-    settings = {
+    settings = rec {
       # default_session = {
       #   command = ''
       #     ${pkgs.greetd.tuigreet}/bin/tuigreet \
@@ -41,6 +41,7 @@
         command = "${pkgs.hyprland}/bin/Hyprland";
         user = "flakeuser";
       };
+      default_session = initial_session;
     };
   };
 
