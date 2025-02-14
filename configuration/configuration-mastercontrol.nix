@@ -20,9 +20,11 @@
     devices = [
       {
         device = "/dev/disk/by-uuid/6294b1bd-3d1f-412f-b231-3b34a37a6ba6";
+        options = "-d nvme";
       }
       {
         device = "/dev/disk/by-uuid/7a74dfcf-b30e-4dae-9cac-72a1f28b0556";
+        options = "-d nvme";
       }
     ];
   };

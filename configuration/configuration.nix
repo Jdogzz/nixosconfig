@@ -157,6 +157,9 @@
     mangohud
     protonup-qt
 
+    #Hardware monitoring
+    smartmontools
+
     #Media
     vlc
 
