@@ -56,15 +56,18 @@
   services.printing = {
     enable = true;
     cups-pdf.enable = true;
-    drivers = [ pkgs.hplipWithPlugin ];
-    nssmdns4 = true;
-    openFirewall = true;
+    drivers = [
+      pkgs.hplipWithPlugin
+      (writeTextDir "share/cups/model/xrx6515.ppd" (builtins.readFile ../printerconfig/xrx6515.ppd))
+    ];
   };
 
-  services.avahi.enable = true;
-  services.avahi.nssmdns4 = true;
-  # for a WiFi printer
-  services.avahi.openFirewall = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    # for a WiFi printer
+    openFirewall = true;
+  };
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;

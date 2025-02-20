@@ -52,7 +52,6 @@
 
     #Communication
     simplex-chat-desktop
-    thunderbird
     zoom-us
 
     #Development
@@ -163,9 +162,6 @@
 
     #Network monitoring
     traceroute
-
-    #Notes
-    logseq
 
     #Password/secret management
     keepassxc
