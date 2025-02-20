@@ -58,7 +58,7 @@
     cups-pdf.enable = true;
     drivers = [
       pkgs.hplipWithPlugin
-      (writeTextDir "share/cups/model/xrx6515.ppd" (builtins.readFile ../printerconfig/xrx6515.ppd))
+      (pkgs.writeTextDir "share/cups/model/xrx6515.ppd" (builtins.readFile ../printerconfig/xrx6515.ppd))
     ];
   };
 
