@@ -56,6 +56,7 @@
   services.printing = {
     enable = true;
     cups-pdf.enable = true;
+    drivers = [ pkgs.hplipWithPlugin ];
   };
 
   services.avahi.enable = true;
