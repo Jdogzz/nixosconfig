@@ -57,6 +57,8 @@
     enable = true;
     cups-pdf.enable = true;
     drivers = [ pkgs.hplipWithPlugin ];
+    nssmdns4 = true;
+    openFirewall = true;
   };
 
   services.avahi.enable = true;
