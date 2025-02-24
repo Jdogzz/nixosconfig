@@ -300,4 +300,28 @@
   #programs.adb.enable = true; #2024-12-27 Not used in some time, disabling
 
   #virtualisation.waydroid.enable = true; #2024-12-27 Not used in some time, disabling
+
+  services.paperless = {
+    enable = true;
+    settings = {
+      PAPERLESS_OCR_LANGUAGE = "eng";
+      PAPERLESS_OCR_USER_ARGS = {
+        optimize = 1;
+        pdfa_image_compression = "lossless";
+      };
+      PAPERLESS_TIKA_ENABLED = true;
+      PAPERLESS_GOTENBERG_ENABLED = true;
+    };
+    exporter.enable = true;
+    dataDir = "~/generalsync/reference/paperless";
+  };
+
+  services.gotenberg = {
+    enable = true;
+  };
+
+  services.tika = {
+    enable = true;
+    enableOcr = true;
+  };
 }
