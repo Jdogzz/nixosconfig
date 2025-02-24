@@ -313,7 +313,8 @@
       PAPERLESS_GOTENBERG_ENABLED = true;
     };
     exporter.enable = true;
-    dataDir = "~/generalsync/reference/paperless";
+    dataDir = "/home/flakeuser/generalsync/reference/paperless";
+    user = "flakeuser";
   };
 
   services.gotenberg = {
