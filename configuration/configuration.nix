@@ -220,11 +220,10 @@
     "nix-command"
     "flakes"
   ];
+
   boot.kernelModules = [
     "sg"
   ];
-
-  hardware.enableAllFirmware = true;
 
   #Config for virtualization. Seems to be needed even just using quickemu.
   virtualisation = {
@@ -294,7 +293,6 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  #hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 

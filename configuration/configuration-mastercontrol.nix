@@ -15,6 +15,8 @@
     "/dev/disk/by-uuid/14503795-627e-4b4e-b2a9-d6f427ccdb72";
   networking.hostName = "mastercontrol"; # Define your hostname.
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+
   services.smartd = {
     enable = true;
     devices = [
