@@ -147,7 +147,9 @@
     picard
 
     #Books
-    calibre
+    (calibre.override {
+      unrarSupport = true;
+    })
 
     #Images
     darktable
