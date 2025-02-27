@@ -61,7 +61,7 @@
     cups-pdf-to-pdf
     #k2pdfopt #2025-01-31 Removing while build failure https://github.com/NixOS/nixpkgs/issues/376898
     libreoffice
-    okular
+    kdePackages.okular
     pandoc
     #paps #2025-01-03 Disabling due to build failure, not used often so may be okay to remove.
     pdfarranger
