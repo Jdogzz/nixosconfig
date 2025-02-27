@@ -222,8 +222,9 @@
   ];
   boot.kernelModules = [
     "sg"
-    "btusb" # 2025-02-26 Adding to support USB bluetooth adapter
   ];
+
+  hardware.enableAllFirmware = true;
 
   #Config for virtualization. Seems to be needed even just using quickemu.
   virtualisation = {
