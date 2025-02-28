@@ -10,6 +10,7 @@
     # Include the results of the hardware scan.
     ../hardware-configuration/hardware-configuration-mastercontrol.nix
     ./modules/paperless.nix
+    ./modules/paperless-autostart-off.nix
   ];
 
   boot.initrd.luks.devices."luks-14503795-627e-4b4e-b2a9-d6f427ccdb72".device =
