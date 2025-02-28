@@ -259,8 +259,8 @@
       winvmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/Public/";
       browservmlaunch = "quickemu --vm ubuntu-24.10.conf --display spice --public-dir ~/Public/";
       zmzm = "QT_SCALE_FACTOR=0.5 zoom";
-      ppngxlaunch = "systemctl start paperless.slice redis-paperless.service";
-      ppngxstop = "systemctl stop paperless.slice redis-paperless.service";
+      ppngxlaunch = "systemctl start system-paperless.slice redis-paperless.service";
+      ppngxstop = "systemctl stop system-paperless.slice redis-paperless.service";
     };
     shellInit = ''
       set fish_greeting
