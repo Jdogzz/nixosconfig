@@ -31,4 +31,17 @@
       }
     ];
   };
+
+  virtualisation.docker = {
+    enable = true;
+    docker.storageDriver = "btrfs";
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
+  environment.systemPackages = with pkgs; [
+    docker-compose
+  ];
 }
