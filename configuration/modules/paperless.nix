@@ -14,6 +14,7 @@
     enable = true;
     address = "0.0.0.0";
     settings = {
+      PAPERLESS_OCR_OUTPUT_TYPE = "pdf"; # 2025-02-28 Adding this in to preserve hyperlinks in PDFs generated
       PAPERLESS_OCR_LANGUAGE = "eng";
       PAPERLESS_OCR_USER_ARGS = {
         optimize = 1;
