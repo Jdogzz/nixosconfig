@@ -11,4 +11,5 @@
 
   # enable the tailscale service
   services.tailscale.enable = true;
+  services.tailscale.useRoutingFeatures = "both";
 }
