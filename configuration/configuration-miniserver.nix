@@ -5,12 +5,15 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ../hardware-configuration/hardware-configuration-miniserver.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ../hardware-configuration/hardware-configuration-miniserver.nix
+    ./configuration.nix
+    ./modules/paperless.nix
+  ];
 
-  boot.initrd.luks.devices."luks-0d836c4a-d4d5-4853-a706-9ae17daa3157".device = "/dev/disk/by-uuid/0d836c4a-d4d5-4853-a706-9ae17daa3157";
+  boot.initrd.luks.devices."luks-0d836c4a-d4d5-4853-a706-9ae17daa3157".device =
+    "/dev/disk/by-uuid/0d836c4a-d4d5-4853-a706-9ae17daa3157";
   networking.hostName = "miniserver"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 }

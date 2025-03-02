@@ -296,7 +296,10 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
-  imports = [ ./configuration-hyprland.nix ];
+  imports = [
+    ./modules/hyprland.nix
+    ./modules/tailscale.nix
+  ];
   #imports = [ ./configuration-kde.nix ];
 
   #programs.adb.enable = true; #2024-12-27 Not used in some time, disabling

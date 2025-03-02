@@ -42,9 +42,7 @@
       nixosConfigurations = {
         mastercontrol = nixpkgs.lib.nixosSystem {
           modules = [
-            ./configuration/configuration.nix
             ./configuration/configuration-mastercontrol.nix
-            ./configuration/configuration-nvidia.nix
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];
@@ -70,11 +68,9 @@
             }
           ];
         };
-        jellyfin = nixpkgs.lib.nixosSystem { modules = [ ./configuration/configuration.nix ]; };
         msilaptop = nixpkgs.lib.nixosSystem {
           specialArgs = commonArgs;
           modules = [
-            ./configuration/configuration.nix
             ./configuration/configuration-msilaptop.nix
             #./configuration/configuration-nvidia.nix
             agenix.nixosModules.default
@@ -106,7 +102,6 @@
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
           modules = [
-            ./configuration/configuration.nix
             ./configuration/configuration-gadgetmobile.nix
             agenix.nixosModules.default
             {
@@ -137,7 +132,6 @@
         };
         miniserver = nixpkgs.lib.nixosSystem {
           modules = [
-            ./configuration/configuration.nix
             ./configuration/configuration-miniserver.nix
             agenix.nixosModules.default
             {
