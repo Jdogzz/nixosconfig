@@ -135,10 +135,10 @@
             nixos-hardware.nixosModules.gpd-win-mini-2024
           ];
         };
-        lenovolaptop = nixpkgs.lib.nixosSystem {
+        miniserver = nixpkgs.lib.nixosSystem {
           modules = [
             ./configuration/configuration.nix
-            ./configuration/configuration-lenovolaptop.nix
+            ./configuration/configuration-miniserver.nix
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];
@@ -162,7 +162,6 @@
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
             }
-            nixos-hardware.nixosModules.lenovo-yoga-6-13ALC6
           ];
         };
 
