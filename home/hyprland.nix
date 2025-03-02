@@ -172,10 +172,10 @@
         layer = "top";
         position = "top";
         height = 30;
-        output = [
-          "DP-3"
-          "eDP-1"
-        ];
+        # output = [
+        #   "DP-3"
+        #   "eDP-1"
+        # ];
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
         modules-right = [
