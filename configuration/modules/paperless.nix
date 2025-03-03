@@ -24,7 +24,7 @@
       PAPERLESS_GOTENBERG_ENABLED = true;
     };
     exporter.enable = true;
-    dataDir = "/home/flakeuser/generalsync/reference/paperless";
+    dataDir = "/home/flakeuser/servicesync/paperless";
     user = "flakeuser";
   };
 

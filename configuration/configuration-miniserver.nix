@@ -10,6 +10,8 @@
     ../hardware-configuration/hardware-configuration-miniserver.nix
     ./configuration.nix
     ./modules/paperless.nix
+    ./modules/tailscale-performance-miniserver.nix
+    ./modules/docker.nix
   ];
 
   boot.initrd.luks.devices."luks-0d836c4a-d4d5-4853-a706-9ae17daa3157".device =
