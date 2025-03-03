@@ -19,4 +19,11 @@
     docker-compose
   ];
 
+  networking.firewall.allowedTCPPorts = [
+    8083 # calibre-web-automated
+  ];
+  networking.firewall.allowedUDPPorts = [
+    8083 # calibre-web-automated
+  ];
+
 }
