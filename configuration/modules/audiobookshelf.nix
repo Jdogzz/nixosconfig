@@ -6,6 +6,9 @@
 }:
 
 {
+  environment.systemPackages = [
+    pkgs.audiobookshelf
+  ];
   services.audiobookshelf = {
     enable = true;
     user = "flakeuser";
