@@ -487,7 +487,7 @@
     enable = true;
     package = pkgs.emacs30-pgtk;
     extraPackages = epkgs: [
-      epkgs.vterm
+      #epkgs.vterm #2025-03-08 Disabling for broken build.
       epkgs.mu4e
     ];
   };
