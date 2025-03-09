@@ -289,6 +289,9 @@
     ];
     #configPackages = [ inputs.hyprland.packages.x86_64-linux.hyprland ];
     configPackages = [ pkgs.hyprland ];
+    config.hyprland = {
+      "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
+    };
   };
 
   programs.hyprlock = {
