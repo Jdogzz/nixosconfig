@@ -52,23 +52,6 @@
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  services.printing = {
-    enable = true;
-    cups-pdf.enable = true;
-    drivers = [
-      pkgs.hplipWithPlugin
-      (pkgs.writeTextDir "share/cups/model/xrx6515.ppd" (builtins.readFile ../printerconfig/xrx6515.ppd))
-    ];
-  };
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    # for a WiFi printer
-    openFirewall = true;
-  };
-
   # Enable sound with pipewire.
   security.rtkit.enable = true;
   services.pipewire = {
@@ -303,6 +286,7 @@
   imports = [
     ./modules/hyprland.nix
     ./modules/tailscale.nix
+    ./modules/printing.nix
   ];
   #imports = [ ./configuration-kde.nix ];
 
