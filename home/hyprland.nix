@@ -397,4 +397,5 @@
     };
   };
 
+  xsession.preferStatusNotifierItems = true;
 }
