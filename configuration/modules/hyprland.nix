@@ -59,4 +59,9 @@
 
   #2025-02-03 May have been added to allow mounting in Dolphin
   services.gvfs.enable = true;
+
+  # Allow setting dark mode https://github.com/NixOS/nixpkgs/issues/274554#issuecomment-2637079431
+  environment.sessionVariables = {
+    ADW_DISABLE_PORTAL = "1";
+  };
 }

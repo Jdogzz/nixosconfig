@@ -344,16 +344,35 @@
 
   services.network-manager-applet.enable = true;
 
-  #Set all things to dark mode
-  dconf = {
-    enable = true;
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  # Dark mode theming
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
   };
 
-  qt.enable = true;
-  qt.style.name = "adwaita-dark";
-  gtk.enable = true;
-  gtk.theme.name = "Adwaita-dark";
+  gtk = {
+    gtk3 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
+    };
+
+    gtk4 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "Adwaita-dark";
+    style = {
+      name = "Adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
+  };
 
   programs.fuzzel = {
     enable = true;
