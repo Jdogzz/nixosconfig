@@ -20,6 +20,9 @@
     kdePackages.dolphin-plugins
     kdePackages.kdegraphics-thumbnailers
 
+    # Network
+    networkmanagerapplet
+
     #Notifications
     libnotify # Dependency of dunst
 
