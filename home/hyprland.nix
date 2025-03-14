@@ -363,6 +363,11 @@
         gtk-application-prefer-dark-theme = 1;
       };
     };
+
+    iconTheme = {
+      package = pkgs.gnome.adwaita-icon-theme;
+      name = "adwaita-icon-theme";
+    };
   };
 
   qt = {
