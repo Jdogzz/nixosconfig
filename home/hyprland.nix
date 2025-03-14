@@ -7,6 +7,10 @@
 }:
 
 {
+  imports = [
+    ./modules/networkmanagerapplet.nix
+  ];
+
   home.packages = with pkgs; [
     #Clipboard
     cliphist
@@ -19,9 +23,6 @@
     kdePackages.dolphin
     kdePackages.dolphin-plugins
     kdePackages.kdegraphics-thumbnailers
-
-    # Network
-    networkmanagerapplet
 
     #Notifications
     libnotify # Dependency of dunst
@@ -344,8 +345,6 @@
       "ssh"
     ];
   };
-
-  services.network-manager-applet.enable = true;
 
   # Dark mode theming
   dconf.settings = {
