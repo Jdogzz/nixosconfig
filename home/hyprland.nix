@@ -57,7 +57,7 @@
         allow_tearing = false;
         layout = "dwindle";
         #"col.active_border" = "rgb(78A8FF) rgb(7676FF) 45deg";
-        "col.inactive_border" = "rgba(585272aa)";
+        #"col.inactive_border" = "rgba(585272aa)";
       };
       dwindle = {
         pseudotile = true;
