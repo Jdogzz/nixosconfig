@@ -309,13 +309,13 @@
         no_fade_in = false;
       };
 
-      background = [
-        {
-          path = "screenshot"; # ~/gitrepos/nixosconfig/wallpaper.jpg";
-          blur_passes = 3;
-          blur_size = 8;
-        }
-      ];
+      # background = [
+      #   {
+      #     path = "screenshot"; # ~/gitrepos/nixosconfig/wallpaper.jpg";
+      #     blur_passes = 3;
+      #     blur_size = 8;
+      #   }
+      # ];
 
       input-field = [
         {
