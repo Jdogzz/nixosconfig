@@ -50,10 +50,10 @@
       bookmarks = { };
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
         darkreader
+        greasemonkey
         hls-stream-detector
         keepassxc-browser
         sidebery
-        tampermonkey
         ublacklist
         ublock-origin
         zotero-connector
