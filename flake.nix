@@ -68,7 +68,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
             }
-            stylix.homeManagerModules.stylix
+            stylix.nixosModules.stylix
           ];
         };
         msilaptop = nixpkgs.lib.nixosSystem {
