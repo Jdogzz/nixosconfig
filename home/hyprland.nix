@@ -367,15 +367,14 @@
     };
 
     iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
-      name = "adwaita-icon-theme";
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
     };
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
-    style = "adwaita-dark";
+    platformTheme.name = "gtk3";
   };
 
   programs.fuzzel = {
