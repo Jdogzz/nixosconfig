@@ -61,7 +61,7 @@
   services.gvfs.enable = true;
 
   # Allow setting dark mode https://github.com/NixOS/nixpkgs/issues/274554#issuecomment-2637079431
-  environment.sessionVariables = {
-    ADW_DISABLE_PORTAL = "1";
-  };
+  # environment.sessionVariables = {
+  #   ADW_DISABLE_PORTAL = "1";
+  # };
 }

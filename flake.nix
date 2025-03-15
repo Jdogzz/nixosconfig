@@ -21,6 +21,7 @@
     };
     agenix.url = "github:ryantm/agenix";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs =
@@ -30,6 +31,7 @@
       home-manager,
       agenix,
       nixos-hardware,
+      stylix,
       ...
     }:
     let
@@ -66,6 +68,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
             }
+            stylix.homeManagerModules.stylix
           ];
         };
         msilaptop = nixpkgs.lib.nixosSystem {
@@ -98,6 +101,7 @@
               home-manager.extraSpecialArgs = commonArgs;
             }
             nixos-hardware.nixosModules.msi-gl65-10SDR-492
+            stylix.homeManagerModules.stylix
           ];
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
@@ -128,6 +132,7 @@
               home-manager.extraSpecialArgs = commonArgs;
             }
             nixos-hardware.nixosModules.gpd-win-mini-2024
+            stylix.homeManagerModules.stylix
           ];
         };
         miniserver = nixpkgs.lib.nixosSystem {
@@ -156,6 +161,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
             }
+            stylix.homeManagerModules.stylix
           ];
         };
 

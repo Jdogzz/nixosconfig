@@ -9,6 +9,7 @@
 {
   imports = [
     ./modules/networkmanagerapplet.nix
+    ./modules/stylix.nix
   ];
 
   home.packages = with pkgs; [
@@ -277,13 +278,13 @@
     };
   };
 
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = [ "~/gitrepos/nixosconfig/wallpaper.jpg" ];
-      wallpaper = [ ",~/gitrepos/nixosconfig/wallpaper.jpg" ];
-    };
-  };
+  # services.hyprpaper = {
+  #   enable = true;
+  #   settings = {
+  #     preload = [ "~/gitrepos/nixosconfig/wallpaper.jpg" ];
+  #     wallpaper = [ ",~/gitrepos/nixosconfig/wallpaper.jpg" ];
+  #   };
+  # };
 
   xdg.portal = {
     enable = true;
@@ -347,35 +348,35 @@
   };
 
   # Dark mode theming
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-  };
+  # dconf.settings = {
+  #   "org/gnome/desktop/interface" = {
+  #     color-scheme = "prefer-dark";
+  #   };
+  # };
 
-  gtk = {
-    gtk3 = {
-      extraConfig = {
-        gtk-application-prefer-dark-theme = 1;
-      };
-    };
+  # gtk = {
+  #   gtk3 = {
+  #     extraConfig = {
+  #       gtk-application-prefer-dark-theme = 1;
+  #     };
+  #   };
 
-    gtk4 = {
-      extraConfig = {
-        gtk-application-prefer-dark-theme = 1;
-      };
-    };
+  #   gtk4 = {
+  #     extraConfig = {
+  #       gtk-application-prefer-dark-theme = 1;
+  #     };
+  #   };
 
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
-    };
-  };
+  #   iconTheme = {
+  #     package = pkgs.papirus-icon-theme;
+  #     name = "Papirus-Dark";
+  #   };
+  # };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk3";
-  };
+  # qt = {
+  #   enable = true;
+  #   style.name = "gtk3";
+  # };
 
   programs.fuzzel = {
     enable = true;
