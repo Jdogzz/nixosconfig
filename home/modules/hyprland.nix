@@ -8,8 +8,8 @@
 
 {
   imports = [
-    ./modules/networkmanagerapplet.nix
-    ./modules/stylix.nix
+    ./networkmanagerapplet.nix
+    ./stylix.nix
   ];
 
   home.packages = with pkgs; [

@@ -8,7 +8,6 @@
 {
   stylix = {
     enable = true;
-    autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/monokai.yaml";
     image = ../../wallpaper.jpg;
     opacity.terminal = 0.8;
