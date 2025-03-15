@@ -427,6 +427,6 @@
   imports = [
     #inputs.hyprland.homeManagerModules.default
     ./modules/hyprland.nix
-    ./modules/firefox.nix
+    ./modules/firefox
   ];
 }

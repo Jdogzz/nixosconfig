@@ -1,0 +1,5 @@
+@media (prefers-color-scheme: dark) {
+    .pdfViewer {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
