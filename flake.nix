@@ -48,6 +48,7 @@
     {
       nixosConfigurations = {
         mastercontrol = nixpkgs.lib.nixosSystem {
+          specialArgs = commonArgs;
           modules = [
             ./configuration/configuration-mastercontrol.nix
             agenix.nixosModules.default
@@ -72,6 +73,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.extraSpecialArgs = commonArgs;
             }
             stylix.nixosModules.stylix
           ];
@@ -110,6 +112,7 @@
           ];
         };
         gadgetmobile = nixpkgs.lib.nixosSystem {
+          specialArgs = commonArgs;
           modules = [
             ./configuration/configuration-gadgetmobile.nix
             agenix.nixosModules.default
@@ -141,6 +144,7 @@
           ];
         };
         miniserver = nixpkgs.lib.nixosSystem {
+          specialArgs = commonArgs;
           modules = [
             ./configuration/configuration-miniserver.nix
             agenix.nixosModules.default
@@ -165,6 +169,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.extraSpecialArgs = commonArgs;
             }
             stylix.nixosModules.stylix
           ];
