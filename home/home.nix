@@ -42,6 +42,8 @@
     };
   };
 
+  nixpkgs.allowUnfreePredicate = _: true;
+
   home.packages = with pkgs; [
 
     #Browsers
