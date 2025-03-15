@@ -391,11 +391,11 @@
         prompt = "❯   ";
         layer = "overlay";
       };
-      colors = {
-        background = "282a36fa";
-        selection = "3d4474fa";
-        border = "fffffffa";
-      };
+      # colors = {
+      #   background = "282a36fa";
+      #   selection = "3d4474fa";
+      #   border = "fffffffa";
+      # };
       border.radius = 20;
       dmenu.exit-immediately-if-empty = "yes";
     };
