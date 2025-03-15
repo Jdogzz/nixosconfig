@@ -42,7 +42,7 @@
     };
   };
 
-  nixpkgs.allowUnfreePredicate = _: true;
+  nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
 
