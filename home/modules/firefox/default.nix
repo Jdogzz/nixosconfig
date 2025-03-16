@@ -53,7 +53,7 @@
         greasemonkey
         hls-stream-detector
         keepassxc-browser
-        sidebery
+        #sidebery #2025-03-16 Trying out the built in vertical tabs feature.
         ublacklist
         ublock-origin
         zotero-connector
@@ -74,6 +74,7 @@
         #"extensions.pocket.enabled" = false;
         "identity.fxaccounts.enabled" = false;
         #"privacy.trackingprotection.enabled" = true;
+        "sidebar.verticalTabs" = true;
         "signon.rememberSignons" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
