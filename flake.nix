@@ -50,7 +50,7 @@
         mastercontrol = nixpkgs.lib.nixosSystem {
           specialArgs = commonArgs;
           modules = [
-            ./configuration/configuration-mastercontrol.nix
+            ./hosts/mastercontrol
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];
@@ -114,7 +114,7 @@
         gadgetmobile = nixpkgs.lib.nixosSystem {
           specialArgs = commonArgs;
           modules = [
-            ./configuration/configuration-gadgetmobile.nix
+            ./hosts/gadgetmobile
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];
@@ -146,7 +146,7 @@
         miniserver = nixpkgs.lib.nixosSystem {
           specialArgs = commonArgs;
           modules = [
-            ./configuration/configuration-miniserver.nix
+            ./hosts/miniserver
             agenix.nixosModules.default
             {
               environment.systemPackages = [ agenix.packages.${system}.default ];

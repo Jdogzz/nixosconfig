@@ -7,12 +7,12 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ../hardware-configuration/hardware-configuration-miniserver.nix
-    ./configuration.nix
-    ./modules/paperless.nix
-    ./modules/tailscale-performance-miniserver.nix
-    ./modules/docker.nix
-    ./modules/audiobookshelf.nix
+    ./hardware-configuration.nix
+    ../../modules/system.nix
+    ../../modules/paperless.nix
+    ../../modules/tailscale-performance-miniserver.nix
+    ../../modules/docker.nix
+    ../../modules/audiobookshelf.nix
   ];
 
   boot.initrd.luks.devices."luks-0d836c4a-d4d5-4853-a706-9ae17daa3157".device =

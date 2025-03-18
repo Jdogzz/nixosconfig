@@ -7,8 +7,8 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ../hardware-configuration/hardware-configuration-gadgetmobile.nix
-    ./configuration.nix
+    ./hardware-configuration.nix
+    ../../modules/system.nix
   ];
 
   boot.initrd.luks.devices."luks-d9b3a388-0cdd-4432-9d94-5705a799d4a0".device =
