@@ -61,6 +61,7 @@
       settings = {
         "browser.aboutConfig.showWarning" = false;
         "browser.disableResetPrompt" = true;
+        "browser.download.dir" = "/home/flakeuser/generalsync/inbox";
         "browser.download.panel.shown" = true;
         "browser.download.useDownloadDir" = false;
         "browser.ml.chat.enabled" = false;
