@@ -59,10 +59,13 @@
         zotero-connector
       ];
       settings = {
+        "browser.aboutConfig.showWarning" = false;
         "browser.disableResetPrompt" = true;
         "browser.download.panel.shown" = true;
         "browser.download.useDownloadDir" = false;
+        "browser.ml.chat.enabled" = false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+        "browser.newtabpage.pinned" = "";
         # "browser.search.defaultenginename" = "DuckDuckGo";
         # "browser.search.order.1" = "DuckDuckGo";
         #"browser.shell.checkDefaultBrowser" = false;
