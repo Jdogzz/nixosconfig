@@ -81,7 +81,7 @@
         msilaptop = nixpkgs.lib.nixosSystem {
           specialArgs = commonArgs;
           modules = [
-            ./configuration/configuration-msilaptop.nix
+            ./hosts/msilaptop
             #./configuration/configuration-nvidia.nix
             agenix.nixosModules.default
             {
