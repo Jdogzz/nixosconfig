@@ -58,7 +58,7 @@
     devenv
 
     #Documents
-    cups-pdf-to-pdf
+    #cups-pdf-to-pdf #2025-03-18 Removing as no longer needed.
     #k2pdfopt #2025-01-31 Removing while build failure https://github.com/NixOS/nixpkgs/issues/376898
     libreoffice
     kdePackages.okular
@@ -186,9 +186,10 @@
     #Terminal formatting
     figlet
 
+    #2025-03-18 Removing since probably taken care of by stylix.
     #Theming
-    adwaita-icon-theme
-    papirus-icon-theme
+    # adwaita-icon-theme
+    # papirus-icon-theme
 
     #Virtual machines
     #These two packages were used to convert an img to a qcow2 file with sparsification. They are currently not needed.
@@ -204,68 +205,6 @@
     wine
     winetricks
   ];
-
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      figlet Time to | dotacat
-      figlet GTD | dotacat
-    '';
-    plugins = [
-      {
-        name = "autopair";
-        src = pkgs.fishPlugins.grc.src;
-      }
-      {
-        name = "done";
-        src = pkgs.fishPlugins.done.src;
-      }
-      {
-        name = "forgit";
-        src = pkgs.fishPlugins.forgit.src;
-      }
-      {
-        name = "fzf-fish";
-        src = pkgs.fishPlugins.fzf-fish.src;
-      }
-      {
-        name = "hydro";
-        src = pkgs.fishPlugins.hydro.src;
-      }
-      {
-        name = "pisces";
-        src = pkgs.fishPlugins.pisces.src;
-      }
-    ];
-    functions = {
-      vterm_printf = {
-        body = ''
-          if begin; [  -n "$TMUX" ]  ; and  string match -q -r "screen|tmux" "$TERM"; end
-              # tell tmux to pass the escape sequences through
-              printf "\ePtmux;\e\e]%s\007\e\\" "$argv"
-          else if string match -q -- "screen*" "$TERM"
-              # GNU screen (screen, screen-256color, screen-256color-bce)
-              printf "\eP\e]%s\007\e\\" "$argv"
-          else
-              printf "\e]%s\e\\" "$argv"
-          end
-        '';
-      };
-    };
-    shellAbbrs = {
-      qrs = "rsync -achvP --mkpath ";
-    };
-    shellAliases = {
-      winvmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/Public/";
-      browservmlaunch = "quickemu --vm ubuntu-24.10.conf --display spice --public-dir ~/Public/";
-      zmzm = "QT_SCALE_FACTOR=0.5 zoom";
-      ppngxlaunch = "systemctl start redis-paperless.service system-paperless.slice paperless-scheduler.service gotenberg.service tika.service";
-      ppngxstop = "systemctl stop system-paperless.slice redis-paperless.service gotenberg.service tika.service";
-    };
-    shellInit = ''
-      set fish_greeting
-    '';
-  };
 
   programs.starship = {
     enable = true;
@@ -428,5 +367,6 @@
     #inputs.hyprland.homeManagerModules.default
     ./modules/hyprland.nix
     ./modules/firefox
+    ./modules/fish.nix
   ];
 }

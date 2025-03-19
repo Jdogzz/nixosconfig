@@ -73,6 +73,7 @@
         #"browser.shell.defaultBrowserCheckCount" = 1;
         #"browser.startup.page" = 3;
         "browser.tabs.firefox-view" = false;
+        "browser.toolbars.bookmarks.visibility" = "never";
         "dom.security.https_only_mode" = true;
         "extensions.autoDisableScopes" = 0; # 2025-03-15 Added to prevent extensions from being automatically disabled.
         #"extensions.pocket.enabled" = false;
