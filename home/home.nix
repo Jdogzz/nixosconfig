@@ -72,40 +72,6 @@
     hunspellDicts.en_US
     hunspellDicts.es_MX
 
-    #Emacs
-    fd # Required for doom emacs
-    ripgrep
-    ripgrep-all
-
-    #Emacs grammar check
-    languagetool
-
-    #Emacs programming
-    black
-    cmake
-    html-tidy
-    nil
-    nixfmt-rfc-style
-    nodePackages.prettier
-    shellcheck
-    shfmt
-
-    #Emacs tools
-    ghostscript # Adding for DocView previewing
-    libtool # Adding for vterm compilation
-    mupdf # Adding for DocView previewing
-    unoconv # Adding for DocView Office document previewing
-
-    #Emacs spelling check
-    (aspellWithDicts (
-      dicts: with dicts; [
-        en
-        en-computers
-        en-science
-        es
-      ]
-    ))
-
     #Email
     #maildrop #2024-12-27 Build failures so commenting this out
 
@@ -174,6 +140,9 @@
     #RSS downloader
     ua
     jq # Requirement for ua
+
+    #Search
+    ripgrep-all
 
     #System monitoring
     htop
@@ -327,41 +296,24 @@
   #   postExec = "${pkgs.mu}/bin/mu index";
   # };
 
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacs30-pgtk;
-    extraPackages = epkgs: [
-      #epkgs.vterm #2025-03-08 Disabling for broken build.
-      epkgs.mu4e
-    ];
-  };
-
+  #2025-03-20 Seems to no longer be necessary
   #Required for doom emacs
-  programs.fzf = {
-    enable = true;
-  };
+  # programs.fzf = {
+  #   enable = true;
+  # };
 
   programs.dircolors = {
     enable = true;
     enableFishIntegration = true;
   };
 
-  programs.direnv = {
-    enable = true;
-    nix-direnv = {
-      enable = true;
-    };
-  };
-
-  #Added to speed up direnv usage with nix
-  services.lorri.enable = true;
-
   programs.mpv.enable = true;
 
   imports = [
     #inputs.hyprland.homeManagerModules.default
-    ./modules/hyprland.nix
+    ./modules/emacs
     ./modules/firefox
     ./modules/fish.nix
+    ./modules/hyprland.nix
   ];
 }
