@@ -74,33 +74,6 @@
     #Hardware information
     pciutils
 
-    #Media
-    jellyfin-media-player
-    # (kdePackages.k3b.override # Removing transcode dependency while waiting for PR: https://github.com/NixOS/nixpkgs/pull/358364
-    #   { transcode = null; }
-    # )
-    kdePackages.k3b
-    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
-
-    #Audio
-    picard
-
-    #Books
-    (calibre.override {
-      unrarSupport = true;
-    })
-
-    #Images
-    darktable
-    gimp-with-plugins
-    (imagemagick.override { libwebpSupport = true; })
-
-    #Video
-    ffmpeg
-    makemkv
-    mkvtoolnix
-    yt-dlp
-
     #Network monitoring
     traceroute
 
@@ -154,8 +127,6 @@
     };
   };
 
-  programs.mpv.enable = true;
-
   imports = [
     #inputs.hyprland.homeManagerModules.default
     ./modules/browsers
@@ -163,6 +134,7 @@
     ./modules/email.nix
     ./modules/fonts.nix
     ./modules/hyprland.nix
+    ./modules/media
     ./modules/term
   ];
 }
