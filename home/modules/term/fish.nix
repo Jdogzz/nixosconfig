@@ -57,8 +57,8 @@
       qrs = "rsync -achvP --mkpath ";
     };
     shellAliases = {
-      winvmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/Public/";
-      browservmlaunch = "quickemu --vm ubuntu-24.10.conf --display spice --public-dir ~/Public/";
+      winvmlaunch = "quickemu --vm windows-11.conf --display spice --public-dir ~/generalsync/inbox/Public/";
+      browservmlaunch = "quickemu --vm ubuntu-24.10.conf --display spice --public-dir ~/generalsync/inbox/Public/";
       zmzm = "QT_SCALE_FACTOR=0.5 zoom";
       ppngxlaunch = "systemctl start redis-paperless.service system-paperless.slice paperless-scheduler.service gotenberg.service tika.service";
       ppngxstop = "systemctl stop system-paperless.slice redis-paperless.service gotenberg.service tika.service";
