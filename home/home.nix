@@ -128,7 +128,6 @@
   };
 
   imports = [
-    #inputs.hyprland.homeManagerModules.default
     ./modules/browsers
     ./modules/emacs
     ./modules/email.nix
