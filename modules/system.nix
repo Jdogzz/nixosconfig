@@ -287,6 +287,7 @@
 
   virtualisation.waydroid.enable = true;
 
+  # 2025-03-28 Added to allow devenv to work with cachix.
   nix.settings.trusted-users = [
     "root"
     "flakeuser"
