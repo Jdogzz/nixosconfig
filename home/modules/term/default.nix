@@ -20,6 +20,10 @@
     enableFishIntegration = true;
   };
 
+  programs.direnv = {
+    enable = true;
+  };
+
   programs.foot = {
     enable = true;
   };

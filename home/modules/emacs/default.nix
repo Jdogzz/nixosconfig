@@ -51,8 +51,4 @@
       epkgs.mu4e
     ];
   };
-
-  imports = [
-    ./modules/tools
-  ];
 }

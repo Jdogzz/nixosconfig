@@ -286,4 +286,9 @@
   #programs.adb.enable = true; #2024-12-27 Not used in some time, disabling
 
   virtualisation.waydroid.enable = true;
+
+  nix.settings.trusted-users = [
+    "root"
+    "flakeuser"
+  ];
 }
