@@ -86,11 +86,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = _: true;
 
-  programs.java = {
-    enable = true;
-    package = pkgs.jdk17;
-  };
-
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # hint electron apps to use wayland
     #WLR_NO_HARDWARE_CURSORS = "1"; # Fixes invisible cursor in hyprland
@@ -103,36 +98,6 @@
     # WLR_RENDER_DRM_DEVICE = "/dev/dri/card1";
   };
 
-  #This overlay is needed because of the extra compile options for blurays. See https://github.com/NixOS/nixpkgs/issues/63641
-  nixpkgs.overlays = [
-    (self: super: {
-      vlc = super.vlc.override {
-        libbluray = super.libbluray.override {
-          withAACS = true;
-          withBDplus = true;
-          withJava = true;
-        };
-      };
-      # zoom = pkgs.zoom-us.overrideAttrs (attrs: {
-      #   nativeBuildInputs = (attrs.nativeBuildInputs or [ ]) ++ [ pkgs.bbe ];
-      #   postFixup =
-      #     ''
-      #       cp $out/opt/zoom/zoom .
-      #       bbe -e 's/\0manjaro\0/\0nixos\0\0\0/' < zoom > $out/opt/zoom/zoom
-      #     ''
-      #     + (attrs.postFixup or "")
-      #     + ''
-      #       sed -i 's|Exec=|Exec=env XDG_CURRENT_DESKTOP="gnome" |' $out/share/applications/Zoom.desktop
-      #     '';
-      # });
-    })
-  ];
-
-  #2025-03-17 Removing this section due to recency of use
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "electron-27.3.11"
-  # ];
-
   environment.systemPackages = with pkgs; [
     #Archive management
     atool
@@ -141,18 +106,8 @@
     unzip
     zip
 
-    #Gaming
-    gamemode
-    gamescope
-    lutris
-    mangohud
-    protonup-qt
-
     #Hardware monitoring
     smartmontools
-
-    #Media
-    vlc
 
     #Nix package management
     #nix-tree # Can be used to resolve unusual package problems # 2024-12-27 Removing as not used in some time.
@@ -266,27 +221,18 @@
 
   services.fwupd.enable = true;
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
-
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
   imports = [
+    ./android.nix
+    ./gaming.nix
     ./hyprland.nix
+    ./media
     ./openssh.nix
     ./printing.nix
     ./tailscale.nix
   ];
-  #imports = [ ./configuration-kde.nix ];
-
-  #programs.adb.enable = true; #2024-12-27 Not used in some time, disabling
-
-  virtualisation.waydroid.enable = true;
 
   # 2025-03-28 Added to allow devenv to work with cachix.
   nix.settings.trusted-users = [
