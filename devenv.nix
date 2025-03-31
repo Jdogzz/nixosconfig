@@ -27,7 +27,13 @@
   # https://devenv.sh/scripts/
   scripts.hello.exec = ''
     echo hello from $GREET
+  '';
+
+  scripts.nfu.exec = ''
     nix flake update
+  '';
+  scripts.nrb.exec = ''
+    nixos-rebuild boot --flake ".#mastercontrol" --use-remote-sudo --print-build-logs
   '';
 
   enterShell = ''
