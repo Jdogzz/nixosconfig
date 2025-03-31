@@ -326,4 +326,6 @@
   };
 
   xsession.preferStatusNotifierItems = true;
+
+  programs.wlogout.enable = true;
 }
