@@ -178,6 +178,7 @@
   # Simplex
   # 39045 TCP
   networking.firewall.allowedTCPPorts = [
+    22
     22000
     39045
   ];
@@ -285,5 +286,11 @@
 
   #programs.adb.enable = true; #2024-12-27 Not used in some time, disabling
 
-  #virtualisation.waydroid.enable = true; #2024-12-27 Not used in some time, disabling
+  virtualisation.waydroid.enable = true;
+
+  # 2025-03-28 Added to allow devenv to work with cachix.
+  nix.settings.trusted-users = [
+    "root"
+    "flakeuser"
+  ];
 }

@@ -43,10 +43,6 @@
   };
 
   home.packages = with pkgs; [
-
-    #Browsers
-    ungoogled-chromium
-
     #Calculation
     units
 
@@ -72,61 +68,11 @@
     hunspellDicts.en_US
     hunspellDicts.es_MX
 
-    #Email
-    #maildrop #2024-12-27 Build failures so commenting this out
-
     #File management
     rclone
 
-    #Fonts
-    corefonts # Cautiously reenabling, the download for this is brittle
-    eb-garamond
-    font-awesome
-    garamond-libre
-    iosevka
-    liberation_ttf
-    libre-caslon
-    lmodern
-    material-design-icons
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.symbols-only
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    noto-fonts-extra
-    powerline-fonts
-    source-code-pro
-    vistafonts
-
     #Hardware information
     pciutils
-
-    #Media
-    jellyfin-media-player
-    # (kdePackages.k3b.override # Removing transcode dependency while waiting for PR: https://github.com/NixOS/nixpkgs/pull/358364
-    #   { transcode = null; }
-    # )
-    kdePackages.k3b
-    (kodi-wayland.passthru.withPackages (kodiPkgs: with kodiPkgs; [ jellyfin ]))
-
-    #Audio
-    picard
-
-    #Books
-    (calibre.override {
-      unrarSupport = true;
-    })
-
-    #Images
-    darktable
-    gimp-with-plugins
-    (imagemagick.override { libwebpSupport = true; })
-
-    #Video
-    ffmpeg
-    makemkv
-    mkvtoolnix
-    yt-dlp
 
     #Network monitoring
     traceroute
@@ -148,13 +94,6 @@
     htop
     iotop-c
 
-    #Terminal colorization
-    dotacat
-    grc
-
-    #Terminal formatting
-    figlet
-
     #2025-03-18 Removing since probably taken care of by stylix.
     #Theming
     # adwaita-icon-theme
@@ -175,16 +114,6 @@
     winetricks
   ];
 
-  programs.starship = {
-    enable = true;
-  };
-
-  programs.foot = {
-    enable = true;
-  };
-
-  fonts.fontconfig.enable = true;
-
   programs.git = {
     enable = true;
     userEmail = "jerzor@pacbell.net";
@@ -198,122 +127,13 @@
     };
   };
 
-  accounts.email = {
-    accounts = {
-      pacbell = {
-        address = "jerzor@pacbell.net";
-        primary = true;
-        userName = "jerzor@pacbell.net";
-        realName = "jerzor@pacbell.net";
-        imap = {
-          host = "imap.mail.att.net";
-          port = 993;
-          tls.enable = true;
-        };
-        mbsync = {
-          enable = true;
-          create = "maildir";
-          expunge = "both";
-        };
-        msmtp.enable = true;
-        mu.enable = true;
-        smtp = {
-          host = "smtp.mail.att.net";
-          port = 465;
-          tls = {
-            enable = true;
-          };
-        };
-        passwordCommand = "cat /run/agenix/secret3";
-        maildir.path = "pacbell";
-      };
-      # outlook = {
-      #   address = "virtualprocessor@outlook.com";
-      #   userName = "virtualprocessor@outlook.com";
-      #   realName = "virtualprocessor@outlook.com";
-      #   imap = {
-      #     host = "outlook.office365.com";
-      #     port = 993;
-      #     tls.enable = true;
-      #   };
-      #   mbsync = {
-      #     enable = true;
-      #     create = "maildir";
-      #     expunge = "both";
-      #   };
-      #   msmtp.enable = true;
-      #   mu.enable = true;
-      #   smtp = {
-      #     host = "smtp-mail.outlook.com";
-      #     port = 587;
-      #     tls = {
-      #       enable = true;
-      #       useStartTls = true;
-      #     };
-      #   };
-      #   passwordCommand = "cat /run/agenix/secret1";
-      #   maildir.path = "outlook";
-      # };
-      # comcast = {
-      #   address = "jerzor@comcast.net";
-      #   userName = "jerzor@comcast.net";
-      #   realName = "jerzor@comcast.net";
-      #   imap = {
-      #     host = "imap.comcast.net";
-      #     port = 993;
-      #     tls = {
-      #       enable = true;
-      #     };
-      #   };
-      #   mbsync = {
-      #     enable = true;
-      #     create = "maildir";
-      #     expunge = "both";
-      #   };
-      #   msmtp.enable = true;
-      #   mu.enable = true;
-      #   smtp = {
-      #     host = "smtp.comcast.net";
-      #     port = 587;
-      #     tls.enable = true;
-      #   };
-      #   passwordCommand = "cat /run/agenix/secret2";
-      #   maildir.path = "comcast";
-      # };
-    };
-    maildirBasePath = "generalsync/reference/emails";
-  };
-
-  programs.mbsync.enable = true;
-  programs.msmtp.enable = true;
-  programs.mu.enable = true;
-
-  #Automatically synchronize with all mail servers and index it
-  #Disabling this since I may have more than one computer active
-  #I'll manually pull down mail when I need it
-  # services.mbsync = {
-  #   enable = true;
-  #   postExec = "${pkgs.mu}/bin/mu index";
-  # };
-
-  #2025-03-20 Seems to no longer be necessary
-  #Required for doom emacs
-  # programs.fzf = {
-  #   enable = true;
-  # };
-
-  programs.dircolors = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  programs.mpv.enable = true;
-
   imports = [
-    #inputs.hyprland.homeManagerModules.default
+    ./modules/browsers
     ./modules/emacs
-    ./modules/firefox
-    ./modules/fish.nix
+    ./modules/email.nix
+    ./modules/fonts.nix
     ./modules/hyprland.nix
+    ./modules/media
+    ./modules/term
   ];
 }

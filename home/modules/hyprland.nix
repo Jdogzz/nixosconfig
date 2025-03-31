@@ -56,8 +56,6 @@
         resize_on_border = true;
         allow_tearing = false;
         layout = "dwindle";
-        #"col.active_border" = "rgb(78A8FF) rgb(7676FF) 45deg";
-        #"col.inactive_border" = "rgba(585272aa)";
       };
       dwindle = {
         pseudotile = true;
@@ -75,14 +73,13 @@
           enabled = true;
           range = 4;
           render_power = 3;
-          #color = "rgba(1a1a1aee)";
         };
       };
       "$mod" = "SUPER";
       bind =
         [
           "$mod, F, exec, firefox"
-          #"$mod, J, exec, jellyfinmediaplayer --platform xcb"
+          "$mod, J, exec, jellyfinmediaplayer"
           "$mod, K, exec, kodi"
           ", Print, exec, grimblast copy area"
           "$mod, R, exec, fish -c 'fuzzel'"
@@ -90,8 +87,6 @@
           "$mod, C, killactive"
           "$mod, E, exec, emacs"
           "$mod, T, togglefloating,"
-          # "$mod, L, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg"
-          # "$mod, S, exec, swaylock -i ~/gitrepos/nixosconfig/wallpaper.jpg & sleep 0.5 && systemctl suspend" # The 5 second delay is to try and avoid conflict between swaylock and suspending.
           "$mod, L, exec, hyprlock"
           "$mod, S, exec, hyprlock & sleep 0.2 && systemctl suspend"
           "$mod, P, pseudo"
@@ -243,7 +238,7 @@
         wireplumber = {
           format = "{volume}% {icon}";
           "format-muted" = "";
-          "on-click" = "helvum";
+          "on-click" = "pavucontrol";
           "format-icons" = [
             ""
             ""
@@ -278,21 +273,12 @@
     };
   };
 
-  # services.hyprpaper = {
-  #   enable = true;
-  #   settings = {
-  #     preload = [ "~/gitrepos/nixosconfig/wallpaper.jpg" ];
-  #     wallpaper = [ ",~/gitrepos/nixosconfig/wallpaper.jpg" ];
-  #   };
-  # };
-
   xdg.portal = {
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
-    #configPackages = [ inputs.hyprland.packages.x86_64-linux.hyprland ];
     configPackages = [ pkgs.hyprland ];
     config.hyprland = {
       "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
@@ -304,34 +290,9 @@
     settings = {
       general = {
         disable_loading_bar = true;
-        #grace = 2;
         hide_cursor = true;
         no_fade_in = false;
       };
-
-      # background = [
-      #   {
-      #     path = "screenshot"; # ~/gitrepos/nixosconfig/wallpaper.jpg";
-      #     blur_passes = 3;
-      #     blur_size = 8;
-      #   }
-      # ];
-
-      # input-field = [
-      #   {
-      #     size = "200, 50";
-      #     position = "0, -80";
-      #     monitor = "";
-      #     dots_center = true;
-      #     fade_on_empty = false;
-      #     font_color = "rgb(202, 211, 245)";
-      #     inner_color = "rgb(91, 96, 120)";
-      #     outer_color = "rgb(24, 25, 38)";
-      #     outline_thickness = 5;
-      #     placeholder_text = ''<span foreground="##cad3f5">Password...</span>'';
-      #     shadow_passes = 2;
-      #   }
-      # ];
     };
   };
 
@@ -347,55 +308,18 @@
     ];
   };
 
-  # Dark mode theming
-  # dconf.settings = {
-  #   "org/gnome/desktop/interface" = {
-  #     color-scheme = "prefer-dark";
-  #   };
-  # };
-
-  # gtk = {
-  #   gtk3 = {
-  #     extraConfig = {
-  #       gtk-application-prefer-dark-theme = 1;
-  #     };
-  #   };
-
-  #   gtk4 = {
-  #     extraConfig = {
-  #       gtk-application-prefer-dark-theme = 1;
-  #     };
-  #   };
-
-  #   iconTheme = {
-  #     package = pkgs.papirus-icon-theme;
-  #     name = "Papirus-Dark";
-  #   };
-  # };
-
-  # qt = {
-  #   enable = true;
-  #   style.name = "gtk3";
-  # };
-
   programs.fuzzel = {
     enable = true;
     settings = {
       main = {
         icon-theme = "Papirus-Dark";
         width = 25;
-        # font = "Hack:weight=bold:size=20";
         line-height = 20;
         fields = "name,generic,comment,categories,filename,keywords";
         terminal = "${pkgs.foot}/bin/foot";
         prompt = "❯   ";
         layer = "overlay";
       };
-      # colors = {
-      #   background = "282a36fa";
-      #   selection = "3d4474fa";
-      #   border = "fffffffa";
-      # };
       border.radius = 20;
       dmenu.exit-immediately-if-empty = "yes";
     };
