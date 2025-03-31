@@ -61,6 +61,7 @@
         "browser.disableResetPrompt" = true;
         "browser.download.defaultFolder" = "/home/flakeuser/generalsync/inbox";
         "browser.download.dir" = "/home/flakeuser/generalsync/inbox";
+        "browser.download.folderList" = 2;
         "browser.download.panel.shown" = true;
         "browser.download.useDownloadDir" = false;
         "browser.ml.chat.enabled" = false;

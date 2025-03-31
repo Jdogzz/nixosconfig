@@ -17,11 +17,8 @@
     languagetool
 
     #Programming
-    black
     cmake
     html-tidy
-    nil
-    nixfmt-rfc-style
     nodePackages.prettier
     shellcheck
     shfmt
