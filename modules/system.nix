@@ -178,7 +178,6 @@
   # Simplex
   # 39045 TCP
   networking.firewall.allowedTCPPorts = [
-    22
     22000
     39045
   ];
@@ -279,8 +278,9 @@
 
   imports = [
     ./hyprland.nix
-    ./tailscale.nix
+    ./openssh.nix
     ./printing.nix
+    ./tailscale.nix
   ];
   #imports = [ ./configuration-kde.nix ];
 
