@@ -35,7 +35,7 @@
 
     #Tools
     ghostscript # Adding for DocView previewing
-    #libtool # Adding for vterm compilation #2025-03-20 Testing whether still needed
+    libtool # Adding for vterm compilation #2025-03-20 Testing whether still needed
     mupdf # Adding for DocView previewing
     unoconv # Adding for DocView Office document previewing
   ];
