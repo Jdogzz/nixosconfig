@@ -178,6 +178,7 @@
   # Simplex
   # 39045 TCP
   networking.firewall.allowedTCPPorts = [
+    22
     22000
     39045
   ];
