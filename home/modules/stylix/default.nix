@@ -11,7 +11,7 @@
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/monokai.yaml";
     fonts.monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "Nerd Fonts Jetbrains Monospace";
+      name = "JetBrainsMono Nerd Font";
     };
     image = ./wallpaper.jpg;
     opacity = {
