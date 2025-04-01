@@ -6,7 +6,7 @@
 }:
 
 {
-  xdg.desktopEntires = {
+  xdg.desktopEntries = {
     bwvm = {
       name = "bwvm";
       genericName = "Virtual machine";
