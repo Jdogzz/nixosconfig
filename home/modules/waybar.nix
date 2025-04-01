@@ -23,8 +23,8 @@
           "tray"
           "wireplumber"
           "battery"
-          "custom/power"
           "clock"
+          "custom/power"
         ];
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -87,7 +87,7 @@
           ];
         };
         "custom/power" = {
-          "format" = "";
+          "format" = " ";
           "on-click" = "wlogout";
           "on-click-right" = "hyprlock";
           "tooltip-format" = "Left: Power menu\nRight: Lock screen";
