@@ -23,8 +23,8 @@
           "tray"
           "wireplumber"
           "battery"
-          "clock"
           "custom/power"
+          "clock"
         ];
         "hyprland/workspaces" = {
           format = "{icon}";
