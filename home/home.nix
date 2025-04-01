@@ -135,5 +135,6 @@
     ./modules/hyprland.nix
     ./modules/media
     ./modules/term
+    ./modules/waybar.nix
   ];
 }
