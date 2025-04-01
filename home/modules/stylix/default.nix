@@ -9,7 +9,10 @@
   stylix = {
     enable = true;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/monokai.yaml";
-    fonts.monospace.package = pkgs.nerd-fonts.jetbrains-mono;
+    fonts.monospace = {
+      package = pkgs.nerd-fonts.jetbrains-mono;
+      name = "Nerd Fonts Jetbrains Monospace";
+    };
     image = ./wallpaper.jpg;
     opacity = {
       applications = 0.8;
