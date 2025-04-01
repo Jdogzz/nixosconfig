@@ -129,6 +129,7 @@
 
   imports = [
     ./modules/browsers
+    ./modules/desktop.nix
     ./modules/emacs
     ./modules/email.nix
     ./modules/fonts.nix

@@ -204,7 +204,7 @@
     enable = true;
     settings = {
       main = {
-        icon-theme = "Papirus-Dark";
+        #icon-theme = "Papirus-Dark";
         width = 25;
         line-height = 20;
         fields = "name,generic,comment,categories,filename,keywords";
