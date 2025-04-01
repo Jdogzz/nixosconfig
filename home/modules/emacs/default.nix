@@ -7,6 +7,9 @@
 
 {
   home.packages = with pkgs; [
+    #Dirvish
+    vips # Needed for image display
+
     #Doom emacs dependencies https://github.com/doomemacs/doomemacs?tab=readme-ov-file#prerequisites
     fd
     findutils
