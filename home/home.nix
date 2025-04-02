@@ -128,6 +128,7 @@
   };
 
   imports = [
+    ./modules/audio.nix
     ./modules/browsers
     ./modules/desktop.nix
     ./modules/emacs
