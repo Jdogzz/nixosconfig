@@ -233,10 +233,4 @@
     ./printing.nix
     ./tailscale.nix
   ];
-
-  # 2025-03-28 Added to allow devenv to work with cachix.
-  nix.settings.trusted-users = [
-    "root"
-    "flakeuser"
-  ];
 }

@@ -50,9 +50,6 @@
     simplex-chat-desktop
     zoom-us
 
-    #Development
-    devenv
-
     #Documents
     #cups-pdf-to-pdf #2025-03-18 Removing as no longer needed.
     #k2pdfopt #2025-01-31 Removing while build failure https://github.com/NixOS/nixpkgs/issues/376898
