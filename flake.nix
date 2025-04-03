@@ -46,6 +46,22 @@
       };
     in
     {
+      devShells."${system}".default =
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+          };
+        in
+        pkgs.mkShell {
+          packages = with pkgs; [
+            # Tooling
+            git
+
+            # Tooling for nix
+            nil
+            nixfmt-rfc-style
+          ];
+        };
       nixosConfigurations = {
         mastercontrol = nixpkgs.lib.nixosSystem {
           specialArgs = commonArgs;
@@ -72,7 +88,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.users.flakeuser = import ./home;
               home-manager.extraSpecialArgs = commonArgs;
             }
             stylix.nixosModules.stylix
@@ -104,7 +120,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.users.flakeuser = import ./home;
               home-manager.extraSpecialArgs = commonArgs;
             }
             nixos-hardware.nixosModules.msi-gl65-10SDR-492
@@ -136,7 +152,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.users.flakeuser = import ./home;
               home-manager.extraSpecialArgs = commonArgs;
             }
             nixos-hardware.nixosModules.gpd-win-mini-2024
@@ -168,7 +184,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.flakeuser = import ./home/home.nix;
+              home-manager.users.flakeuser = import ./home;
               home-manager.extraSpecialArgs = commonArgs;
             }
             stylix.nixosModules.stylix
