@@ -125,15 +125,6 @@
   };
 
   imports = [
-    ./modules/audio.nix
-    ./modules/browsers
-    ./modules/desktop.nix
-    ./modules/emacs
-    ./modules/email.nix
-    ./modules/fonts.nix
-    ./modules/hyprland.nix
-    ./modules/media
-    ./modules/term
-    ./modules/waybar.nix
+    ./modules
   ];
 }

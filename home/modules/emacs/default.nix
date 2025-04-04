@@ -7,9 +7,6 @@
 
 {
   home.packages = with pkgs; [
-    #Dirvish
-    vips # Needed for image display
-
     #Doom emacs dependencies https://github.com/doomemacs/doomemacs?tab=readme-ov-file#prerequisites
     fd
     findutils
@@ -38,7 +35,6 @@
 
     #Tools
     ghostscript # Adding for DocView previewing
-    libtool # Adding for vterm compilation #2025-03-20 Testing whether still needed
     mupdf # Adding for DocView previewing
     unoconv # Adding for DocView Office document previewing
   ];
@@ -47,8 +43,11 @@
     enable = true;
     package = pkgs.emacs30-pgtk;
     extraPackages = epkgs: [
-      epkgs.vterm
       epkgs.mu4e
     ];
   };
+
+  imports = [
+    ./modules
+  ];
 }
