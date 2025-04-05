@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ./emacs
     ./term
   ];
 }
