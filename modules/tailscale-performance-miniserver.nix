@@ -6,11 +6,6 @@
 }:
 
 {
-  environment.systemPackages = with pkgs; [
-    ethtool
-    networkd-dispatcher
-  ];
-
   services = {
     networkd-dispatcher = {
       enable = true;
