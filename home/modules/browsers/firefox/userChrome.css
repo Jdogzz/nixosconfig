@@ -7,11 +7,14 @@
 #alltabs-button {
     display: none !important;
 }
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-    #new-tab-button {
-        display: none;
-    }
+/* Adding this to hide the new tab button */
+#new-tab-button {
+    display: none;
 }
 #firefox-view-button {
     display: none !important;
+}
+/* Adding this to hide the new tab entry at the bottom of the sidebar */
+#tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {
+    display: none;
 }
