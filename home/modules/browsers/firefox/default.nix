@@ -52,6 +52,7 @@
         greasemonkey
         hls-stream-detector
         keepassxc-browser
+        single-file
         ublacklist
         ublock-origin
         zotero-connector
