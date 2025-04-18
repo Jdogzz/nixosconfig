@@ -11,8 +11,6 @@
     enable = true;
     policies = {
       DontCheckDefaultBrowser = true;
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
       DisablePocket = true;
       DisableFirefoxScreenshots = true;
 
@@ -27,12 +25,6 @@
         WebSuggestions = false;
         SponsoredSuggestions = false;
         ImproveSuggest = false;
-      };
-
-      EnableTrackingProtection = {
-        Value = true;
-        Cryptomining = true;
-        Fingerprinting = true;
       };
 
       FirefoxHome = {
@@ -68,15 +60,12 @@
         "browser.ml.chat.enabled" = false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
         "browser.newtabpage.pinned" = "";
-        #"browser.shell.checkDefaultBrowser" = false;
-        #"browser.shell.defaultBrowserCheckCount" = 1;
         #"browser.startup.page" = 3;
         "browser.tabs.firefox-view" = false;
         "browser.toolbars.bookmarks.visibility" = "never";
         "dom.security.https_only_mode" = true;
         "extensions.autoDisableScopes" = 0; # 2025-03-15 Added to prevent extensions from being automatically disabled.
         "identity.fxaccounts.enabled" = false;
-        #"privacy.trackingprotection.enabled" = true;
         "sidebar.verticalTabs" = true;
         "signon.rememberSignons" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
@@ -94,4 +83,8 @@
   };
 
   stylix.targets.firefox.profileNames = [ "flakeuser" ];
+
+  imports = [
+    ./privacy.nix
+  ];
 }
