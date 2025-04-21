@@ -50,6 +50,8 @@
     simplex-chat-desktop
     zoom-us
 
+    python313
+
     #Documents
     #cups-pdf-to-pdf #2025-03-18 Removing as no longer needed.
     graphviz
