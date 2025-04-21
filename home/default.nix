@@ -51,6 +51,7 @@
     zoom-us
 
     python313
+    texlivePackages.amscls
 
     #Documents
     #cups-pdf-to-pdf #2025-03-18 Removing as no longer needed.
