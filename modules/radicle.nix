@@ -26,7 +26,7 @@
         hints = true;
       };
       node = {
-        alia = "flakeuser";
+        alias = "flakeuser";
         listen = [ ];
         peers = {
           type = "dynamic";
