@@ -231,7 +231,7 @@
     ./media
     ./openssh.nix
     ./printing.nix
-    ./radicle.nix
+    #./radicle.nix
     ./tailscale.nix
   ];
 }
