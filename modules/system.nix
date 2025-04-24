@@ -116,7 +116,6 @@
     gcc
     git
     gnumake
-    radicle-node
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -232,6 +231,7 @@
     ./media
     ./openssh.nix
     ./printing.nix
+    ./radicle.nix
     ./tailscale.nix
   ];
 }
