@@ -50,11 +50,8 @@
     simplex-chat-desktop
     zoom-us
 
-    python313
-    python313Packages.lxml
     #Documents
     #cups-pdf-to-pdf #2025-03-18 Removing as no longer needed.
-    graphviz
     #k2pdfopt #2025-01-31 Removing while build failure https://github.com/NixOS/nixpkgs/issues/376898
     libreoffice
     kdePackages.okular
