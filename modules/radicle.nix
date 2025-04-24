@@ -8,6 +8,6 @@
 {
   services.radicle = {
     enable = true;
-    openFirewall = true;
+    node.openFirewall = true;
   };
 }
