@@ -6,6 +6,10 @@
 }:
 
 {
+  environment.systemPackages = with pkgs; [
+    radicle-node
+  ];
+
   services.radicle = {
     enable = true;
     node.openFirewall = true;
