@@ -91,11 +91,6 @@
     htop
     iotop-c
 
-    #2025-03-18 Removing since probably taken care of by stylix.
-    #Theming
-    # adwaita-icon-theme
-    # papirus-icon-theme
-
     #Virtual machines
     #These two packages were used to convert an img to a qcow2 file with sparsification. They are currently not needed.
     #guestfs-tools
