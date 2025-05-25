@@ -13,7 +13,7 @@
       package = pkgs.nerd-fonts.jetbrains-mono;
       name = "JetBrainsMono Nerd Font";
     };
-    image = ./wallpaper.png;
+    image = ./wallpaper.jpg;
     opacity = {
       applications = 0.8;
       desktop = 0.8;
