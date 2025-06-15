@@ -20,14 +20,5 @@
       terminal = 0.8;
     };
     #polarity = "dark";
-<<<<<<< HEAD
-=======
-    # targets = {
-    #   #firefox.profileNames = [ "flakeuser" ];
-    #   hyprlock = {
-    #     useWallpaper = true;
-    #   };
-    # };
->>>>>>> 2438ed7 (Remove hyprlock in stylix config.)
   };
 }
