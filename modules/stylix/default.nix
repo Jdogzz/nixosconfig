@@ -20,11 +20,11 @@
       terminal = 0.8;
     };
     #polarity = "dark";
-    targets = {
-      #firefox.profileNames = [ "flakeuser" ];
-      hyprlock = {
-        useWallpaper = true;
-      };
-    };
+    # targets = {
+    #   #firefox.profileNames = [ "flakeuser" ];
+    #   hyprlock = {
+    #     useWallpaper = true;
+    #   };
+    # };
   };
 }
