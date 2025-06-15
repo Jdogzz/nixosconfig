@@ -21,6 +21,7 @@
     };
     #polarity = "dark";
     targets = {
+      firefox.profileNames = [ "flakeuser" ];
       hyprlock = {
         useWallpaper = true;
       };

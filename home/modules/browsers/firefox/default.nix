@@ -82,8 +82,6 @@
     };
   };
 
-  stylix.targets.firefox.profileNames = [ "flakeuser" ];
-
   imports = [
     ./privacy.nix
   ];
