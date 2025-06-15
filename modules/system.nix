@@ -106,6 +106,9 @@
     unzip
     zip
 
+    #Hardware configuring
+    brightnessctl
+
     #Hardware monitoring
     smartmontools
 

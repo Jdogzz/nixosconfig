@@ -21,6 +21,7 @@
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "tray"
+          "backlight"
           "wireplumber"
           "battery"
           "clock"
@@ -35,6 +36,16 @@
         "hyprland/window" = {
           "max-length" = 200;
           "separate-outputs" = true;
+        };
+        backlight = {
+          format = "{percent}% {icon}";
+          "format-icons" = [
+            ""
+            ""
+          ];
+          "on-scroll-up" = "brightnessctl s 1%+";
+          "on-scroll-down" = "brightnessctl s 1%-";
+          "on-click-right" = "brightnessctl s 0";
         };
         clock = {
           format = " {:%H:%M:%S %Z 󰸘 %y/%m/%d}";
