@@ -235,6 +235,7 @@
     ./openssh.nix
     ./printing.nix
     #./radicle.nix
+    ./stylix
     ./tailscale.nix
   ];
 }

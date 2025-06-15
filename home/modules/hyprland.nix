@@ -9,7 +9,6 @@
 {
   imports = [
     ./networkmanagerapplet.nix
-    ./stylix
   ];
 
   home.packages = with pkgs; [
