@@ -58,6 +58,8 @@
         "browser.download.panel.shown" = true;
         "browser.download.useDownloadDir" = false;
         "browser.ml.chat.enabled" = false;
+        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+        "browser.newtabpage.activity-stream.feeds.system.topstories" = false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
         "browser.newtabpage.pinned" = "";
         #"browser.startup.page" = 3;
